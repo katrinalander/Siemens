@@ -1,0 +1,115 @@
+<link rel="stylesheet" href="css/ctrlSelect.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div class="display">
+    <div id="CFM" class="settingCard" onclick="selectCard('CFM')">
+        <label>CFM<br />Control</label>
+        <button class="whiteBtn">Enable</button>
+        <label>MAX<br/>CFM:</label>
+        <input type="number" placeholder="000000">
+    </div>
+    <div id="TSP" class="settingCard" onclick="selectCard('TSP')">
+        <label>Static Pressure Control</label>
+        <button class="whiteBtn">Enable</button>
+        <label>MAX<br/>TSP:</label>
+        <input type="number" placeholder="00.0">
+    </div>
+    <div id="DUCT" class="settingCard" onclick="selectCard('DUCT')">
+        <label>Duct Static Pressure Control</label>
+        <button class="whiteBtn">Enable</button>
+        <label>MAX<br/>DP "w.c.:</label>
+        <input type="number" placeholder="00.0">
+    </div>
+    <div id="VFD" class="settingCard" onclick="selectCard('VFD')">
+        <label>VFD<br />Control</label>
+        <button class="whiteBtn">Enable</button>
+        <label>MAX<br/>SPEED:</label>
+        <input type="number" placeholder="000.0">
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev"></button>
+    <button class="showNext"></button>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    var cards = ['CFM','TSP','DUCT','VFD'];
+    if(sessionStorage.getItem("CTRL") === "CFM") {
+        document.getElementById("CFM").classList.add("selectedCard");
+        document.getElementById("TSP").classList.remove("selectedCard");
+        document.getElementById("DUCT").classList.remove("selectedCard");
+        document.getElementById("VFD").classList.remove("selectedCard");
+
+        document.getElementById("CFM").classList.remove("settingCard");
+        document.getElementById("TSP").classList.add("settingCard");
+        document.getElementById("DUCT").classList.add("settingCard");
+        document.getElementById("VFD").classList.add("settingCard");
+    }
+    if(sessionStorage.getItem("CTRL") === "TSP") {
+        document.getElementById("TSP").classList.add("selectedCard");
+        document.getElementById("CFM").classList.remove("selectedCard");
+        document.getElementById("DUCT").classList.remove("selectedCard");
+        document.getElementById("VFD").classList.remove("selectedCard");
+
+        document.getElementById("TSP").classList.remove("settingCard");
+        document.getElementById("CFM").classList.add("settingCard");
+        document.getElementById("DUCT").classList.add("settingCard");
+        document.getElementById("VFD").classList.add("settingCard");
+    }
+    if(sessionStorage.getItem("CTRL") === "DUCT") {
+        document.getElementById("DUCT").classList.add("selectedCard");
+        document.getElementById("TSP").classList.remove("selectedCard");
+        document.getElementById("CFM").classList.remove("selectedCard");
+        document.getElementById("VFD").classList.remove("selectedCard");
+
+        document.getElementById("DUCT").classList.remove("settingCard");
+        document.getElementById("TSP").classList.add("settingCard");
+        document.getElementById("CFM").classList.add("settingCard");
+        document.getElementById("VFD").classList.add("settingCard");
+    }
+    if(sessionStorage.getItem("CTRL") === "VFD") {
+        document.getElementById("VFD").classList.add("selectedCard");
+        document.getElementById("TSP").classList.remove("selectedCard");
+        document.getElementById("DUCT").classList.remove("selectedCard");
+        document.getElementById("CFM").classList.remove("selectedCard");
+
+        document.getElementById("VFD").classList.remove("settingCard");
+        document.getElementById("TSP").classList.add("settingCard");
+        document.getElementById("DUCT").classList.add("settingCard");
+        document.getElementById("CFM").classList.add("settingCard");
+    }
+    function selectCard(set) {
+        sessionStorage.setItem("CTRL", set);
+        cards.forEach(function (card) {
+            var c = document.getElementById(card);
+            if (card === set) {
+                c.classList.remove("settingCard");
+                c.classList.add("selectedCard");
+            }
+            else {
+                c.classList.remove("selectedCard");
+                c.classList.add("settingCard");
+            }
+
+        });
+    }
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+</script>

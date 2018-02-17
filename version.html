@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="css/maint.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<style>
+    p {
+        margin: 0.6em;
+    }
+</style>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div class="display">
+    <div style="display: flex">
+        <span style="margin: 0 5%">
+            <p><b>Controller Program Version: </b></p>
+            <p><b>Controller Firmware Version: </b></p>
+            <p><b>Comm Module Firmware Version: </b></p>
+        </span>
+        <span>
+            <b><p id="progVer"></p></b>
+            <b><p id="firmVer"></p></b>
+            <b><p id="modVer"></p></b>
+        </span>
+    </div>
+    <div style="display: flex">
+        <span style="margin: 0 5%">
+            <p>GUID: Target</p>
+            <p>GUID: Application</p>
+            <p>GUID: OBH</p>
+            <p>GUID: BSP</p>
+        </span>
+        <span>
+            <p id="target"></p>
+            <p id="app"></p>
+            <p id="obh"></p>
+            <p id="bsp"></p>
+        </span>
+    </div>
+    <div style="display: flex">
+        <span style="margin: 0 5%">
+            <p><b>HMI Version:</b></p>
+        </span>
+        <span>
+            <b><p id="hmi"></p></b>
+        </span>
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev"></button>
+    <button class="showNext"></button>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    var progVer = "00000";
+    document.getElementById('progVer').innerHTML=progVer;
+    var firmVer = "00000";
+    document.getElementById('firmVer').innerHTML=firmVer;
+    var modVer = "00000";
+    document.getElementById('modVer').innerHTML=modVer;
+    var target = "00000";
+    document.getElementById('target').innerHTML=target;
+    var app = "00000";
+    document.getElementById('app').innerHTML=app;
+    var obh = "00000";
+    document.getElementById('obh').innerHTML=obh;
+    var bsp = "00000";
+    document.getElementById('bsp').innerHTML=bsp;
+    var hmi = "OPT2.0.12.21.16";
+    document.getElementById('hmi').innerHTML=hmi;
+
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+</script>

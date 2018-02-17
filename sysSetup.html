@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="css/sysSetup.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div class="mainBody">
+    <div class="left">
+        <div class="top">
+            <input type="number" min="60" max="1800" step="1" placeholder="0000 sec">
+            <p>ENTER OPTIMIZATION TIMER</p>
+            <p>From 60-1800 seconds</p>
+            <p>This value refers to the wait time to optimize after a change in CFM</p>
+        </div>
+        <div class="bottom">
+            <div>
+                <input type="number" min="0" step="1" placeholder="000 Hz">
+                <p>VFD HI HZ</p>
+                <p>Change Max.Freq. Limit</p>
+            </div>
+            <!--<br />-->
+            <p>CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
+
+            <div id="1-ENABLEDISABLE" class="switch">
+                <button class="disHardware greenBtn" onclick="clickHardware()">ENABLE COMMS<br/>DISABLE HARDWARE</button>
+                <button class="disComms blueBtn" onclick="clickHardware()">ENABLE HARDWARE<br/>DISABLE COMMS</button>
+
+                <span class="hrdwareActive">HARDWARE<br/>ACTIVE</span>
+                <span class="commsActive">COMMS<br/>ACTIVE</span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <p>ENTER DELAY TIMER</p>
+        <p>From 0-60 mn.</p>
+        <input class="timer" type="number" placeholder="00 mn" min="0" max="60" step="1">
+        <p>Delay before Optimization will start after unit starts.</p>
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD<br/>Status</button>
+        <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
+        <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
+    <button onclick="openSysSetup()">System<br/>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+    //------ Navigation ---------
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+    function nextSysPage() {
+        window.location.href = "sysSetupNext1.html";
+    }
+
+    function clickHardware() {
+        var display = document.getElementsByClassName('hrdwareActive')[0].style.display;
+        console.log("display=", display);
+        if (display !== 'none') {
+            document.getElementsByClassName('hrdwareActive')[0].style.display = 'none';
+            document.getElementsByClassName('disHardware')[0].style.display = 'none';
+            document.getElementsByClassName('commsActive')[0].style.display = 'inline';
+            document.getElementsByClassName('disComms')[0].style.display = 'inline';
+
+            // send value 1 for id=1-ENABLEDISABLE
+        }
+        else {
+            document.getElementsByClassName('hrdwareActive')[0].style.display = 'inline';
+            document.getElementsByClassName('disHardware')[0].style.display = 'inline';
+            document.getElementsByClassName('commsActive')[0].style.display = 'none';
+            document.getElementsByClassName('disComms')[0].style.display = 'none';
+
+            // send value 0 for id=1-ENABLEDISABLE
+        }
+    }
+</script>

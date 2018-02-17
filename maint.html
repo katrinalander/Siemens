@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="css/maint.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div class="display">
+    <div class="prmtr">
+        <div class="lbl">PARAMETER FEATURES:</div>
+        <div class="btns">
+            <div style="display: flex">
+                <button class="save drkBlueBtn">SAVE</button>
+                <button class="load greenBtn">LOAD</button>
+            </div>
+            <button class="cycle greyBtn">CYCLE POWER</button>
+        </div>
+    </div>
+    <div class="maintBtns">
+        <button class="maintBtn whiteBtn" onclick="openCtrlSelect()">Control<br/>Selection</button>
+        <button class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>
+    </div>
+    <div class="maintBtns">
+        <button class="maintBtn whiteBtn" onclick="openVersion()">Version</button>
+        <button id="password" class="maintBtn whiteBtn">Password<br/>Management</button>
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev"></button>
+    <button class="showNext"></button>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<!-- The Modal of Users -->
+<div id="modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>Change User Passwords</p>
+        </div>
+        <div class="modal-body">
+            <div id="showUsers"></div>
+        </div>
+    </div>
+
+</div>
+<!-- The Modal of Particular User -->
+<div id="modalUser" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p></p>
+        </div>
+        <div class="modal-body">
+            <div class="showUser">
+                <div class="line">
+                    <p class="userInput">User:</p>
+                    <div class="userInput" id="userName"></div>
+                </div>
+                <div class="line">
+                    <p class="userInput">Password:</p>
+                    <div class="userInput" id="pass"></div>
+                </div>
+                <div class="line">
+                    <p class="userInput">Group:</p>
+                    <div class="userInput" id="group"></div>
+                </div>
+                <div class="line">
+                    <p class="userInput">Logoff time:</p>
+                    <div class="userInput" id="time"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="submitUser" class="greenBtn">OK</button><button class="greyBtn" onclick="clickCancel()">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/maint.js"></script>
+<script>
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+</script>

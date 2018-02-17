@@ -1,0 +1,251 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ccc;
+    font-family: Verdana;
+    font-size: 1em;
+    color: #000;
+    margin: 0;
+}
+
+iframe[seamless] {
+    border: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.header {
+    position: relative;
+    font-family: "Open Sans";
+    width: 100%;
+    height: 10%;
+    top: 0;
+    background-color: rgba(0, 128, 0, 0.77);
+    color: white;
+}
+.header h2 {
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #ebebeb;
+    color: white;
+    display: flex;
+}
+
+.footer button {
+    background-color: #6c6c6c;
+    margin: 0.5%;
+    flex:1;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .4s ease, border .4s ease;
+    white-space: nowrap;
+    color: white;
+    font-size: 1.2em;
+    font-family: "Open Sans";
+}
+/*-------------------------------------*/
+.display {
+    height: 25%;
+}
+.display .infoDisplay {
+    width: 75%;
+    height: 100%;
+    float: left;
+    display: flex;
+}
+.display .infoDisplay .total {
+    width: 50%;
+}
+.display .infoDisplay .total h3 {
+    font-size: 1em;
+    margin: 2%;
+    text-align: center;
+    height: 43%;
+}
+.display .alertDisplay {
+    width: 25%;
+    height: 125%;
+    float: right;
+    margin-top: -6.2%;
+    position: relative;
+}
+@keyframes alarmFlash {
+  from {background-color: red; color: white;}
+    to {background-color: yellow; color: red;}
+}
+.display .alertDisplay .alarm {
+    background-color: red;
+    animation-name: alarmFlash;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    border: 2px solid #820000;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+.display .alertDisplay .smokeOn {
+    background-color: yellow;
+    color: red;
+    border: 1px solid red;
+    font-size: 1em;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    box-sizing: border-box;
+    margin-bottom: 0.2em;
+    visibility: hidden;
+}
+.display .alertDisplay .damper {
+    background-color: yellow;
+    color: red;
+    border: 1px solid red;
+    animation-name: alarmFlash;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    font-size: 1em;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    height: 38%;
+    box-sizing: border-box;
+    margin-bottom: 0.2em;
+    visibility: hidden;
+}
+
+.buttons {
+    height: 45%;
+    display: flex;
+}
+/* LEFT PART in buttons */
+.left {
+    float: left;
+    width: 30%;
+}
+.left button {
+    color: white;
+    margin: 0.5%;
+    flex:1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .4s ease, border .4s ease;
+    white-space: nowrap;
+    font-size: 1.2em;
+    font-family: "Open Sans";
+    width: 98%;
+    height: 32%;
+}
+
+.left .speedVFD {
+    text-align: center;
+    height: 96%;
+    border: 2px solid #6c6c6c;
+    border-radius: 5px;
+    margin: 2px;
+}
+.left .speedVFD .blueDisplay {
+    height: auto;
+}
+
+
+/* RIGHT PART in buttons */
+.right {
+    float: right;
+    text-align: center;
+    width: 30%;
+    border: 2px solid #6c6c6c;
+    border-radius: 5px;
+    margin: 2px;
+}
+.right h3 {
+    margin: 0.2em;
+}
+.right .part {
+    width: 100%;
+    height: 48%;
+}
+.right .part p {
+    margin: 0.2em;
+}
+.right .part h3 {
+    font-size: 1.2em;
+    margin: 2%;
+    text-align: center;
+}
+.blueDisplay {
+    font-family: "Open Sans";
+    width: 100%;
+    height: 40%;
+    float: left;
+    padding: 0.3em;
+    font-size: 1em;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
+
+/* CENTRAL PART in buttons */
+.center {
+    width: 40%;
+}
+
+.center button {
+    margin: 0.5%;
+    flex:1;
+    height: auto;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 1.2em;
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+.center button.start {
+    color: green;
+    width: 48%;
+    height: 32%;
+}
+.center button.stop {
+    color: red;
+    width: 48%;
+    height: 32%;
+}
+.center button.local {
+    color: darkorange;
+    width: 48%;
+    height: 32%;
+}
+.center button.remote {
+    color: #637ad1;
+    width: 48%;
+    height: 32%;
+}
+.center div.system {
+    border: 2px solid darkorange;
+    color: darkorange;
+    width: 100%;
+    height: 32%;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1em;
+    font-family: "Open Sans";
+    border-radius: 5px;
+    box-sizing: border-box;
+}

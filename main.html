@@ -1,0 +1,252 @@
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div class="display">
+    <div class="infoDisplay">
+        <div class="total">
+            <h3>TOTAL CFM</h3>
+            <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
+        </div>
+        <div class="total">
+            <h3>TSP ACROSS FANWALL</h3>
+            <div id="1-TOTAL DSP" class="blackDisplay">00.00" WC</div>
+        </div>
+        <div class="total">
+            <h3 class="showDUCT">DUCT STATIC PRESSURE</h3>
+            <div id="1-TOTAL DUCT" class="blackDisplay showDUCT">00.00" WC</div> <!-- check this ID -->
+        </div>
+    </div>
+    <div class="alertDisplay">
+        <div id="1-DAMPER STATE" class="damper">Damper End Switch Open</div><!--flashing when 1, hide when 0-->
+        <div id="1-SMOKEON" class="smokeOn">SmokeON</div><!--display when 1, hide when 0-->
+        <div id="2-COMMON ALARM" class="alarm">ALARM</div><!--flash when 1, hide when 0-->
+    </div>
+</div>
+<div class="buttons">
+    <div class="left">
+        <span id="hideForVFD">
+            <button id="1-ENABLE OPTIMI" class="greenBtn" onclick="onManually()">MANUALLY</br>OPTIMIZE</button>
+            <button id="3-ENABLE" class="redBtn" onclick="onAutoOpt()">ENABLE AUTO</br>OPTIMIZATION</button>
+            <button id="1-ENABLE CFM CO" class="redBtn showCFM" onclick="onCFMctrl()">ENABLE</br>CFM CONTROL</button>
+            <!-- didn't find id for TSP CONTROL -->
+            <button id="1-ENABLE TSP CO" class="redBtn showTSP" onclick="onTSPctrl()">ENABLE</br>TSP CONTROL</button>
+            <!-- didn't find id for DSP CONTROL -->
+            <button id="1-ENABLE DSP CO" class="redBtn showDUCT" onclick="onDSPctrl()">ENABLE</br>DSP CONTROL</button>
+        </span>
+        <span class="speedVFD showVFD">
+            <h3>ENTER SPEED REFERENCE:</h3>
+            <input id="1-VFD SPEED" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
+        </span>
+    </div>
+
+    <div class="center">
+        <button id="1-GLOBAL START" class="start whiteBtn">GLOBAL</br>START</button>
+        <button id="1-GLOBAL STOP F" class="stop whiteBtn">GLOBAL</br>STOP</button>
+        <button id="1-ENABLE MANUAL" class="local whiteBtn" onclick="onLocalCtrl()">LOCAL</br>CONTROL</button>
+        <button class="remote whiteBtn" onclick="onRemoteCtrl()">REMOTE</br>CONTROL</button>
+        <div class="system">
+            SYSTEM IN LOCAL
+        </div>
+    </div>
+    <div class="right showCFM">
+        <div class="part">
+            <h3>ENTER CFM SET POINT</h3>
+            <input id="1-CFM SETPOINT" type="number" class="blueDisplay" placeholder="000000 CFM" step="1" min="0"/>
+        </div>
+        <div class="part">
+            <h3>ENTER SPEED REFERENCE</h3>
+            <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
+        </div>
+    </div>
+    <div class="right showTSP">
+        <div class="part">
+            <h3>ENTER TSP SET POINT</h3>
+            <!-- not sure in ID here -->
+            <input id="1-TSP SETPOINT" type="number" class="blueDisplay" placeholder="00.00 w.c" step="1" min="0"/>
+        </div>
+        <div class="part">
+            <h3>ENTER SPEED REFERENCE</h3>
+            <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
+        </div>
+    </div>
+    <div class="right showDUCT">
+        <div class="part">
+            <h3>ENTER DUCT SET POINT</h3>
+            <!-- not sure in ID here -->
+            <input id="1-DSP SETPOINT" type="number" class="blueDisplay" placeholder="00.00 w.c" step="1" min="0"/>
+        </div>
+        <div class="part">
+            <h3>ENTER SPEED REFERENCE</h3>
+            <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
+        </div>
+    </div>
+    <div class="right showVFD">
+        <h3>SPEED LIMITS</h3>
+        <div class="part">
+            <p>VFD MIN HZ</p>
+            <!-- not sure in ID here -->
+            <input id="1-VFD MIN" type="number" class="blueDisplay" placeholder="000 Hz" step="1" min="0"/>
+        </div>
+        <div class="part">
+            <p>VFD MAX HZ</p>
+            <input id="1-VFD MAX" type="number" class="blueDisplay" placeholder="000 Hz" step="1" min="0" />
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev">3</button>
+    <button class="showNext">4</button>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    var elmsCFM = document.getElementsByClassName("showCFM");
+    var elmsTSP = document.getElementsByClassName("showTSP");
+    var elmsDUCT = document.getElementsByClassName("showDUCT");
+    var elmsVFD = document.getElementsByClassName("showVFD");
+    var leftBtns = document.getElementById("hideForVFD");
+
+    if(!sessionStorage.getItem("CTRL") || sessionStorage.getItem("CTRL") === "CFM") {
+        console.log("!!!");
+        sessionStorage.setItem("CTRL", "CFM");
+        for(var e = 0; e < elmsCFM.length; e++) {
+            elmsCFM[e].style.display='block';
+        }
+        for(var i = 0; i < elmsTSP.length; i++) {
+            elmsTSP[i].style.display='none';
+        }
+        for(var d = 0; d < elmsDUCT.length; d++) {
+            elmsDUCT[d].style.display='none';
+        }
+        for(var f = 0; f < elmsVFD.length; f++) {
+            elmsVFD[f].style.display='none';
+        }
+        leftBtns.style.display='block';
+    }
+    else if (sessionStorage.getItem("CTRL") === "TSP") {
+        for(var e = 0; e < elmsCFM.length; e++) {
+            elmsCFM[e].style.display='none';
+        }
+        for(var i = 0; i < elmsTSP.length; i++) {
+            elmsTSP[i].style.display='block';
+        }
+        for(var d = 0; d < elmsDUCT.length; d++) {
+            elmsDUCT[d].style.display='none';
+        }
+        for(var f = 0; f < elmsVFD.length; f++) {
+            elmsVFD[f].style.display='none';
+        }
+        leftBtns.style.display='block';
+    }
+    else if (sessionStorage.getItem("CTRL") === "DUCT") {
+        for(var e = 0; e < elmsCFM.length; e++) {
+            elmsCFM[e].style.display='none';
+        }
+        for(var i = 0; i < elmsTSP.length; i++) {
+            elmsTSP[i].style.display='none';
+        }
+        for(var d = 0; d < elmsDUCT.length; d++) {
+            elmsDUCT[d].style.display='block';
+        }
+        for(var f = 0; f < elmsVFD.length; f++) {
+            elmsVFD[f].style.display='none';
+        }
+        leftBtns.style.display='block';
+    }
+    else if (sessionStorage.getItem("CTRL") === "VFD") {
+        leftBtns.style.display='none';
+        for(var e = 0; e < elmsCFM.length; e++) {
+            elmsCFM[e].style.display='none';
+        }
+        for(var i = 0; i < elmsTSP.length; i++) {
+            elmsTSP[i].style.display='none';
+        }
+        for(var d = 0; d < elmsDUCT.length; d++) {
+            elmsDUCT[d].style.display='none';
+        }
+        for(var f = 0; f < elmsVFD.length; f++) {
+            elmsVFD[f].style.display='block';
+        }
+    }
+
+    function onRemoteCtrl() {
+        var elm = document.getElementsByClassName('system');
+        elm[0].innerHTML = "SYSTEM IN REMOTE";
+        elm[0].style.borderColor = "#637ad1";
+        elm[0].style.color = "#637ad1";
+        // send value for id 1-ENABLE MANUAL 1 when it's pressed
+        console.log("need to write functionality for this button!");
+    }
+    function onLocalCtrl() {
+        var elm = document.getElementsByClassName('system');
+        elm[0].innerHTML = "SYSTEM IN LOCAL";
+        elm[0].style.borderColor = "darkorange";
+        elm[0].style.color = "darkorange";
+        // send value for id 1-ENABLE MANUAL 0 when it's pressed
+        console.log("need to write functionality for this button!");
+    }
+    function onManually() {
+        var elm = document.getElementById('1-ENABLE OPTIMI');
+        if(elm.innerHTML == "OPTIMIZING") {
+            elm.innerHTML = "MANUALLY</br>OPTIMIZE";
+            elm.classList.remove('greyBtn');
+            elm.classList.add('greenBtn');
+        }
+        else {
+            elm.innerHTML = "OPTIMIZING";
+            elm.classList.remove('greenBtn');
+            elm.classList.add('greyBtn');
+        }
+        // send value 1 when it's ON....not understand when it's send value 0 for OFF
+        console.log("need to write functionality for this button!");
+    }
+    function onAutoOpt() {
+        var elm = document.getElementById('3-ENABLE');
+        if(elm.innerHTML == "ENABLE AUTO<br>OPTIMIZATION") {
+            elm.innerHTML = "DISABLE AUTO</br>OPTIMIZATION";
+            elm.classList.remove('redBtn');
+            elm.classList.add('greenBtn');
+        }
+        else {
+            elm.innerHTML = "ENABLE AUTO</br>OPTIMIZATION";
+            elm.classList.remove('greenBtn');
+            elm.classList.add('redBtn');
+        }
+        // send value 0 for id 3-ENABLE, when it's disable send value 1
+        console.log("need to write functionality for this button!");
+    }
+    function onCFMctrl() {
+        var elm = document.getElementById('1-ENABLE CFM CO');
+        if(elm.innerHTML == "ENABLE<br>CFM CONTROL") {
+            elm.innerHTML = "DISABLE</br>CFM CONTROL";
+            elm.classList.remove('redBtn');
+            elm.classList.add('greenBtn');
+        }
+        else {
+            elm.innerHTML = "ENABLE<br>CFM CONTROL";
+            elm.classList.remove('greenBtn');
+            elm.classList.add('redBtn');
+        }
+        // send value 1 for id 1-ENABLE CFM CO, when it's disable send 0
+        console.log("need to write functionality for this button!");
+    }
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+</script>

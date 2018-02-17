@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="css/sysSetup.css">
+<link rel="stylesheet" href="css/colors.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div>
+    <p style="text-align:center"><b>CFM VALUES</b></p>
+    <div id="listOfCFM">
+        <!--<div class="leftList"></div>-->
+        <!--<div class="rightList"></div>-->
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD<br/>Status</button>
+    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevSysPage()">Prev.<br />Page</a>
+    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
+    <button onclick="openSysSetup()">System<br/>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+
+    //--------- List of FANS -----------
+    var fans = [{0:1234},{1:2345},{2:3456},{3:4567},{4:5678},{5:''},{6:7890},{7:8901},{8:9012},
+        {9:1234},{10:2345},{11:''},{12:4567},{13:5678},{14:6789},{15:7890},{16:8901},{17:9012},
+        {18:1234},{19:2345},{20:3456},{21:4567},{22:5678},{23:6789},{24:7890},{25:8901},{26:9012},
+        {27:1234},{28:2345},{29:3456},{30:4567},{31:5678}];
+
+    var elm = [];
+    var row = []; var r=0;
+    row[r] = document.createElement('div');
+    fans.forEach(function (fan,i) {
+        elm[i] = document.createElement('div');
+        elm[i].id = i; elm[i].className = 'fan';
+        if(fan[i] === '') { fan[i] = '00000'; }
+        elm[i].innerHTML = "FAN "+(i+1)+" - "+fan[i];
+        if(i % 8 === 0){
+            r = r+1;
+            row[r] = document.createElement('div');
+        }
+        row[r].id = 'row'+r; row[r].className = 'fanRow';
+        row[r].appendChild(elm[i]);
+    });
+
+    row.forEach(function (r) {
+        document.getElementById('listOfCFM').appendChild(r);
+    });
+
+    //------ Navigation ---------
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        window.location.href = "sysSetup.html";
+    }
+    function nextSysPage() {
+        window.location.href = "sysSetupNext1.html";
+    }
+    function prevSysPage() {
+        window.location.href = "sysSetupNext1.html";
+    }
+    function nextSysPage() {
+        //window.location.href = "sysSetupNext3.html";
+    }
+</script>
