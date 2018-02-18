@@ -3,7 +3,7 @@ body {
     width: 100%;
     background-color: #ccc;
     font-family: Verdana;
-    font-size: 1em;
+    /*font-size: 1em;*/
     color: #000;
     margin: 0;
 }
@@ -26,7 +26,7 @@ iframe[seamless] {
 }
 .header h2 {
     padding: 1%;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
 }
 
 .footer {
@@ -51,7 +51,7 @@ iframe[seamless] {
     transition: background-color .4s ease, border .4s ease;
     white-space: nowrap;
     color: white;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     font-family: "Open Sans";
 }
 /*-------------------------------------*/
@@ -68,7 +68,7 @@ iframe[seamless] {
     width: 50%;
 }
 .display .infoDisplay .total h3 {
-    font-size: 1em;
+    /*font-size: 1em;*/
     margin: 2%;
     text-align: center;
     height: 43%;
@@ -91,7 +91,7 @@ iframe[seamless] {
     animation-iteration-count: infinite;
     border: 2px solid #820000;
     color: white;
-    font-size: 1em;
+    /*font-size: 1em;*/
     font-weight: 600;
     padding: 0.5em;
     text-align: center;
@@ -104,7 +104,7 @@ iframe[seamless] {
     background-color: yellow;
     color: red;
     border: 1px solid red;
-    font-size: 1em;
+    /*font-size: 1em;*/
     padding: 0.5em;
     text-align: center;
     width: 100%;
@@ -120,7 +120,7 @@ iframe[seamless] {
     animation-name: alarmFlash;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
-    font-size: 1em;
+    /*font-size: 1em;*/
     padding: 0.5em;
     text-align: center;
     width: 100%;
@@ -148,7 +148,7 @@ iframe[seamless] {
     cursor: pointer;
     transition: background-color .4s ease, border .4s ease;
     white-space: nowrap;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     font-family: "Open Sans";
     width: 98%;
     height: 32%;
@@ -186,7 +186,7 @@ iframe[seamless] {
     margin: 0.2em;
 }
 .right .part h3 {
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     margin: 2%;
     text-align: center;
 }
@@ -196,7 +196,7 @@ iframe[seamless] {
     height: 40%;
     float: left;
     padding: 0.3em;
-    font-size: 1em;
+    /*font-size: 1em;*/
     border: 2px solid gray;
     box-sizing: border-box;
 }
@@ -212,29 +212,29 @@ iframe[seamless] {
     height: auto;
     border-radius: 5px;
     white-space: nowrap;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     font-family: "Open Sans";
     font-weight: 600;
 }
 
 .center button.start {
     color: green;
-    width: 48%;
+    width: 47.5%;
     height: 32%;
 }
 .center button.stop {
     color: red;
-    width: 48%;
+    width: 47.5%;
     height: 32%;
 }
 .center button.local {
     color: darkorange;
-    width: 48%;
+    width: 47.5%;
     height: 32%;
 }
 .center button.remote {
     color: #637ad1;
-    width: 48%;
+    width: 47.5%;
     height: 32%;
 }
 .center div.system {
@@ -243,8 +243,8 @@ iframe[seamless] {
     width: 100%;
     height: 32%;
     text-align: center;
-    font-size: 1.2em;
-    padding: 1em;
+    /*font-size: 1.2em;*/
+    /*padding: 1em;*/
     font-family: "Open Sans";
     border-radius: 5px;
     box-sizing: border-box;

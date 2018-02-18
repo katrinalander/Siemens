@@ -34,22 +34,34 @@ function returnName(user) {
         userName.readOnly = true;
         userName.className = 'modalInput';
         userName.value = user.user;
+        if(document.getElementsByClassName('modalInput')[0]) {
+            document.getElementById('userName').removeChild(document.getElementsByClassName('modalInput')[0]);
+        }
         document.getElementById('userName').appendChild(userName);
         var pass = document.createElement('input');
         pass.type = 'password';
         pass.className = 'modalInput';
         pass.value = user.password;
+        if(document.getElementsByClassName('modalInput')[1]) {
+            document.getElementById('pass').removeChild(document.getElementsByClassName('modalInput')[1]);
+        }
         document.getElementById('pass').appendChild(pass);
         var group = document.createElement('input');
         group.type = 'text';
         group.className = 'modalInput';
         group.readOnly = true;
         group.value = user.group;
+        if(document.getElementsByClassName('modalInput')[2]) {
+            document.getElementById('group').removeChild(document.getElementsByClassName('modalInput')[2]);
+        }
         document.getElementById('group').appendChild(group);
         var logoff = document.createElement('input');
         logoff.type = 'text';
         logoff.className = 'modalInput';
         logoff.value = user.logoff;
+        if(document.getElementsByClassName('modalInput')[3]) {
+            document.getElementById('time').removeChild(document.getElementsByClassName('modalInput')[3]);
+        }
         document.getElementById('time').appendChild(logoff);
 
         function submitUser() {
@@ -66,11 +78,10 @@ for (var u in Users) {
     newName.innerHTML = Users[u].user;
     var newGroup = document.createElement('span');
     newGroup.innerHTML = Users[u].group;
-    newElement.id = u; console.log("[u]="+u);
+    newElement.id = u;
     newElement.className = "user";
     newElement.appendChild(newName);
     newElement.appendChild(newGroup);
-
     newElement.addEventListener("click", returnName(Users[u]));
     document.getElementById('showUsers').appendChild(newElement);
 }

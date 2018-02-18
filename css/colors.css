@@ -309,8 +309,69 @@ input.modalInput {
     border: 2px solid gray;
     box-sizing: border-box;
 }
-/*------- ARROWS BUTTONS -----------------*/
+/*------- ARROWS BUTTONS , FONT SIZE-----------------*/
+@media only screen and (max-height: 400px) {
+    body,h3 { font-size: 0.7em;}
+    h2,p,button {font-size: 0.8em;}
+    .footer button{font-size: 1.2em;}
+    .mainBody {
+        font-size: 0.8em;
+    }
+
+    .rightButton {
+        width: 12%;
+        height: auto;
+        background-color: #6c6c6c;
+        border-radius: 5px;
+        margin: 0.5%;
+        color: white;
+        font-size: 1.2em;
+        font-family: "Open Sans";
+        text-align: center;
+        padding-top: 1.7%;
+        z-index: 100;
+    }
+
+    .arrowR {
+        width: 7.7%;
+        height: 67.9%;
+        bottom: -9px;
+        left: -4.9%;
+        background-color: #6c6c6c;
+        border-radius: 5px;
+        transform: rotate(45deg);
+        position: relative;
+    }
+
+    .leftButton {
+        width: 12%;
+        height: auto;
+        background-color: #6c6c6c;
+        border-radius: 5px;
+        margin: 0.5%;
+        color: white;
+        font-size: 1.2em;
+        font-family: "Open Sans";
+        text-align: center;
+        padding-top: 1.7%;
+        z-index: 100;
+    }
+
+    .arrowL {
+        width: 7.7%;
+        height: 67.9%;
+        bottom: -9px;
+        left: 5%;
+        background-color: #6c6c6c;
+        border-radius: 5px;
+        transform: rotate(45deg);
+        position: relative;
+    }
+}
 @media only screen and (min-height: 400px) and (max-height: 500px) {
+    body,h3 { font-size: 1em;}
+    h2,p,button {font-size: 1.2em;}
+
     .rightButton {
         width: 12%;
         height: auto;
@@ -362,6 +423,9 @@ input.modalInput {
     }
 }
 @media only screen and (min-height: 550px) and (max-height: 600px) {
+    body,h3 { font-size: 1em;}
+    h2,p,button {font-size: 1.2em;}
+
     .rightButton {
         width: 12%;
         height: auto;
