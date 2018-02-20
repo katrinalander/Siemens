@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="css/lonWorks.css">
+<link rel="stylesheet" href="css/colors.css">
+
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div>
+    <h3 style="text-align: center">LONWORKS SETUP</h3>
+    <div class="line">
+        <p class="lbl">Neuron ID </p><p id="neuron" style="flex:1;margin-right:2%;margin-left:2%;"></p>
+    </div>
+    <div class="line">
+        <p class="lbl">Send Heartbeat </p><input id="send" class="data" readonly />
+    </div>
+    <div class="line">
+        <p class="lbl">Receive Heartbeat </p><input id="receive" class="data" readonly />
+    </div>
+    <div class="line">
+        <p class="lbl">Minimum Send Time </p><input id="minimum" class="data" readonly />
+    </div>
+</div>
+
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>
+    <a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+
+<script>
+
+    var neuronID = '00000000000';
+    var sendH = '000000000';
+    var receiveH = '000000000';
+    var minH = '000000000';
+
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+
+    document.getElementById('neuron').innerHTML = neuronID;
+    document.getElementById('send').value = sendH;
+    document.getElementById('receive').value = receiveH;
+    document.getElementById('minimum').value = minH;
+
+    // ------ NAVIGATION -----
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+    }
+    function prevPage() {
+        window.location.href = "maint.html";
+    }
+</script>

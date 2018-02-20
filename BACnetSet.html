@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="css/BACnetSet.css">
+<link rel="stylesheet" href="css/colors.css">
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div>
+    <p style="text-align: center">WINS Name: <span id="winNum"></span></p>
+
+    <div class="topPart">
+        <div class="left">
+            <button class="DHCP redBtn" onclick="switchDHCP()">ENABLE<br/>DHCP</button>
+            <div class="port">
+                Port:<br/>
+                <input id="port" placeholder="000000" type="number" readonly>
+            </div>
+        </div>
+        <div class="devPrmt">
+            <div style="display: flex;margin: 1px;"><p style="margin:0;flex: 1">DEV ID:</p><input style="flex: 1" id="devID" type="number" readonly></div>
+            <div style="display: flex;margin: 1px"><p style="margin:0;flex: 1">DEV NAME:</p><input style="flex: 1" id="devName" type="number" readonly></div>
+        </div>
+    </div>
+
+    <div style="margin:0 5%">
+        <p class="actual"><b>Actual Settings</b></p>
+        <div>
+            <div class="line">
+                <p class="quaterLbl">IP Address:</p>
+                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
+                <div class="sets" id="set1"></div>
+            </div>
+            <div class="line">
+                <p class="quaterLbl">Mask:</p>
+                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
+                <div class="sets" id="set2"></div>
+            </div>
+            <div class="line">
+                <p class="quaterLbl">Gateway:</p>
+                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
+                <div class="sets" id="set3"></div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center">Note: Cycle power after making changes.</p>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>
+    <a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<script>
+    var winNum = '000000000000000';
+    //actual settings 3:
+    var set1 = '000000000000000';
+    var set2 = '000000000000000';
+    var set3 = '000000000000000';
+
+    var switcherDHCP = false;
+
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+
+    document.getElementById('winNum').innerHTML = winNum;
+    document.getElementById('set1').innerHTML = set1;
+    document.getElementById('set2').innerHTML = set2;
+    document.getElementById('set3').innerHTML = set3;
+
+    function switchDHCP() {
+        var dhcp = document.getElementsByClassName('DHCP')[0];
+        var hideDHCP1 = document.getElementsByClassName('quater');
+        var hideDHCP2 = document.getElementsByClassName('quaterLbl');
+
+        if(switcherDHCP) {
+            dhcp.innerHTML = "DISABLE<br/>DHCP";
+            dhcp.classList.remove('redBtn');
+            dhcp.classList.add('greenBtn');
+            for(var elm=0; elm<hideDHCP1.length; elm++) {
+                hideDHCP1[elm].style.visibility = 'visible';
+            };
+            for(var elm=0; elm<hideDHCP2.length; elm++)  {
+                hideDHCP2[elm].style.visibility = 'visible';
+            };
+            switcherDHCP =false;
+        }
+        else {
+            dhcp.innerHTML = "ENABLE<br>DHCP";
+            dhcp.classList.remove('greenBtn');
+            dhcp.classList.add('redBtn');
+            for(var elm=0; elm<hideDHCP1.length; elm++) {
+                hideDHCP1[elm].style.visibility = 'hidden';
+            };
+            for(var elm=0; elm<hideDHCP2.length; elm++)  {
+                hideDHCP2[elm].style.visibility = 'hidden';
+            };
+            switcherDHCP = true;
+        }
+    }
+
+    switchDHCP();
+
+    // ------ NAVIGATION -----
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+    }
+    function prevPage() {
+        window.location.href = "maint.html";
+    }
+</script>

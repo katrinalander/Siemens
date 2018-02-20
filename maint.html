@@ -17,7 +17,10 @@
     </div>
     <div class="maintBtns">
         <button class="maintBtn whiteBtn" onclick="openCtrlSelect()">Control<br/>Selection</button>
-        <button class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>
+        <button id="slct" class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>
+        <button id="bac" class="maintBtn whiteBtn" onclick="openBacnet()">BACnet<br/>Setup</button>
+        <button id="lonWorks" class="maintBtn whiteBtn" onclick="openLonWorks()">LonWorks<br/>Setup</button>
+        <button id="modBus" class="maintBtn whiteBtn" onclick="openModBus()">ModBus<br/>Setup</button>
     </div>
     <div class="maintBtns">
         <button class="maintBtn whiteBtn" onclick="openVersion()">Version</button>
@@ -85,6 +88,27 @@
 
 <script src="js/maint.js"></script>
 <script>
+    var BACnet = false;
+    var LonWorks = false;
+    var ModBus = true;
+    if(BACnet) {
+        document.getElementById('bac').style.display = 'block';
+        document.getElementById('lonWorks').style.display = 'none';
+        document.getElementById('modBus').style.display = 'none';
+        document.getElementById('slct').style.display = 'none';
+    }
+    if(LonWorks) {
+        document.getElementById('lonWorks').style.display = 'block';
+        document.getElementById('bac').style.display = 'none';
+        document.getElementById('modBus').style.display = 'none';
+        document.getElementById('slct').style.display = 'none';
+    }
+    if(ModBus) {
+        document.getElementById('modBus').style.display = 'block';
+        document.getElementById('lonWorks').style.display = 'none';
+        document.getElementById('bac').style.display = 'none';
+        document.getElementById('slct').style.display = 'none';
+    }
     /* ----- Navigation ----- */
     function openMaint() {
         window.location.href = "maint.html";
@@ -105,5 +129,14 @@
         else if(sessionStorage.getItem("CTRL") === "VFD") {
             window.location.href = "sysSetup3.html";
         }
+    }
+    function openBacnet() {
+        window.location.href = "BACnetSet.html";
+    }
+    function openLonWorks() {
+        window.location.href = "lonWorks.html";
+    }
+    function openModBus() {
+        window.location.href = "modBus.html";
     }
 </script>

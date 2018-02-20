@@ -231,7 +231,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 10%; /* Location of the box */
+    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -373,7 +373,7 @@ input.modalInput {
         position: relative;
     }
 }
-@media only screen and (min-height: 400px) and (max-height: 500px) {
+@media only screen and (min-height: 400px)  {
     body,h3 { font-size: 1em;}
     h2,p,button {font-size: 1.2em;}
 
@@ -427,7 +427,7 @@ input.modalInput {
         position: relative;
     }
 }
-@media only screen and (min-height: 550px) and (max-height: 600px) {
+@media only screen and (min-height: 550px){
     body,h3 { font-size: 1em;}
     h2,p,button {font-size: 1.2em;}
 
