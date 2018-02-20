@@ -6,18 +6,10 @@
 <div class="mainBody">
     <div class="left">
         <div class="top">
-            <input type="number" min="60" max="1800" step="1" placeholder="0000 sec">
-            <p>ENTER OPTIMIZATION TIMER</p>
-            <p>From 60-1800 seconds</p>
-            <p>This value refers to the wait time to optimize after a change in CFM</p>
+            <p>VFD HI HZ Change Max. Freq. Limit</p>
+            <input type="number" min="60" max="1800" step="1" placeholder="000 Hz">
         </div>
         <div class="bottom">
-            <div>
-                <input type="number" min="0" step="1" placeholder="000 Hz">
-                <p>VFD HI HZ</p>
-                <p>Change Max.Freq. Limit</p>
-            </div>
-            <!--<br />-->
             <p>CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
 
             <div id="1-ENABLEDISABLE" class="switch">
@@ -29,21 +21,44 @@
             </div>
         </div>
     </div>
-    <div class="right">
-        <p>ENTER DELAY TIMER</p>
-        <p>From 0-60 mn.</p>
-        <input class="timer" type="number" placeholder="00 mn" min="0" max="60" step="1">
-        <p>Delay before Optimization will start after unit starts.</p>
+    <div class="right" style="text-align:center">
+        <p>AIRFLOW ADJUSTMENT Adjust Cone<br/>Constant to<br/>much airflow</p>
+        <input style="width:40%;margin-top:-3px;" placeholder="+0000" type="number" class="blueDisplay"/>
+        <br/>
+        <p>Cone Constant</p>
+        <div style="display: flex;justify-content: center;">
+            <input style="width:30%" placeholder="0000" class="blueDisplay">
+            <button id="question" class="questionBtn"></button>
+        </div>
     </div>
 </div>
 <div class="footer">
     <button onclick="openMain()">Main</button>
     <button onclick="openVFDstatus()">VFD<br/>Status</button>
-        <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
-        <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
+    <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
+    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
     <button onclick="openSysSetup()">System<br/>Setup</button>
     <button onclick="openMaint()">Maint.</button>
 </div>
+
+<!-- Info Modal -->
+<div id="modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p></p>
+        </div>
+        <div class="modal-body">
+            <p>New Cone Const =<br/>(Airflow Actual / Airflow Display) x Old Cone Const.</p>
+            <br/>
+            <p>Airflow Adjustment = New Cone Constant - Old Cone Constant</p>
+        </div>
+    </div>
+
+</div>
+
 <script>
     document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
     document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
@@ -69,8 +84,35 @@
         }
     }
     function nextSysPage() {
-        window.location.href = "sysSetupNext1.html";
+        window.location.href = "sysSetupNext1_VFD.html";
     }
+
+    /*------ Modal -----*/
+    // Get the modal
+    var modal = document.getElementById('modal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("question");
+
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
 
     clickHardware();
 

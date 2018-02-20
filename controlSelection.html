@@ -113,8 +113,11 @@
         if(sessionStorage.getItem("CTRL") === "CFM"){
             window.location.href = "sysSetup.html";
         }
-        else if(sessionStorage.getItem("CTRL") === "TSP") {
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
             window.location.href = "sysSetup2.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
         }
     }
 </script>

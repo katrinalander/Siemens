@@ -1,52 +1,34 @@
 <link rel="stylesheet" href="css/sysSetup.css">
 <link rel="stylesheet" href="css/colors.css">
-<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
+<style>
+    .mainBody p {
+        margin: 0.5em;
+    }
+</style>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
-<div class="mainBody">
-    <div class="left">
-        <p>Change IO configuration for input and output signals</p>
-        <br/>
-        <div>
-            <div style="display: flex">
-                <p>CFM Set Point X2: </p>
-                <select>
-                    <option disabled selected>Please select...</option>
-                    <option value="vdc">0-10 Vdc IN</option>
-                    <option value="ma">4-20 mA IN</option>
-                </select>
-            </div>
-            <p>CFM Set Point Scaled</p>
-            <div style="display: flex">
-                <p>CFM Output - X3: </p>
-                <select>
-                    <option disabled selected>Please select...</option>
-                    <option value="vdc">0-10 Vdc OUT</option>
-                    <option value="ma">4-20 mA OUT</option>
-                </select>
-            </div>
-            <p>CFM Output Scaled 0 - 000000</p>
+<div class="mainBody" style="display: block;text-align: center;">
+    <p><b>Change IO configuration for input and output signals</b></p>
 
-        </div>
-        <br/>
-        <p>LOOP CONTROL ADJUSTMENT</p>
-        <br/>
-        <p>Adjust speed of control loop from 1-100%
-            <input style="width: 20%;margin-top:-3px" placeholder="00%" type="number" min="1" max="100" class="blueDisplay"/>
-        </p>
+    <div style="display: flex;margin-left:25%;">
+        <p>Speed Reference Input X2: </p>
+        <select style="height:12%">
+            <option disabled selected>Please select...</option>
+            <option value="vdc">0-10 Vdc IN</option>
+            <option value="ma">4-20 mA IN</option>
+        </select>
     </div>
-
-    <div class="right" style="text-align:center">
-        <p>AIRFLOW ADJUSTMENT Adjust Cone<br/>Constant to<br/>much airflow</p>
-        <input style="width:40%;margin-top:-3px;" placeholder="+0000" type="number" class="blueDisplay"/>
-        <br/>
-        <p>Cone Constant</p>
-        <div style="display: flex;justify-content: center;">
-            <input style="width:30%" placeholder="0000" class="blueDisplay">
-            <button id="question" class="questionBtn"></button>
-        </div>
+    <p>Speed Reference 0 - 000000</p>
+    <div style="display: flex;margin-left:25%;">
+        <p>CFM Feedback Output - X3: </p>
+        <select style="height:12%">
+            <option disabled selected>Please select...</option>
+            <option value="vdc">0-10 Vdc OUT</option>
+            <option value="ma">4-20 mA OUT</option>
+        </select>
     </div>
+    <p>CFM Output Scaled 0 - 000000</p>
 </div>
 <div class="footer">
     <button onclick="openMain()">Main</button>
@@ -131,11 +113,6 @@
         window.location.href = "valuesCFM.html";
     }
     function prevSysPage() {
-        if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
-            window.location.href = "sysSetup2.html";
-        }
-        else {
-            window.location.href = "sysSetup.html";
-        }
+        window.location.href = "sysSetup3.html";
     }
 </script>
