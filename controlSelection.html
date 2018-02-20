@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/ctrlSelect.css">
 <link rel="stylesheet" href="css/colors.css">
-<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
@@ -12,7 +12,7 @@
         <input type="number" placeholder="000000">
     </div>
     <div id="TSP" class="settingCard" onclick="selectCard('TSP')">
-        <label>Static Pressure Control</label>
+        <label>Static<br/>Pressure Control</label>
         <button class="whiteBtn">Enable</button>
         <label>MAX<br/>TSP:</label>
         <input type="number" placeholder="00.0">
@@ -110,6 +110,11 @@
         window.location.href = "VFDstatus.html";
     }
     function openSysSetup() {
-        window.location.href = "sysSetup.html";
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP") {
+            window.location.href = "sysSetup2.html";
+        }
     }
 </script>

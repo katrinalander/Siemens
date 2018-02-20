@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/sysSetup.css">
 <link rel="stylesheet" href="css/colors.css">
-<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
@@ -62,15 +62,17 @@
         window.location.href = "VFDstatus.html";
     }
     function openSysSetup() {
-        window.location.href = "sysSetup.html";
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP") {
+            window.location.href = "sysSetup2.html";
+        }
     }
     function nextSysPage() {
-        window.location.href = "sysSetupNext1.html";
+        window.location.href = "switches.html";
     }
     function prevSysPage() {
         window.location.href = "sysSetupNext1.html";
-    }
-    function nextSysPage() {
-        //window.location.href = "sysSetupNext3.html";
     }
 </script>

@@ -16,7 +16,7 @@ iframe[seamless] {
 }
 .header {
     position: relative;
-    font-family: "Open Sans";
+    font-family: Verdana;
     width: 100%;
     height: 10%;
     top: 0;
@@ -50,7 +50,7 @@ iframe[seamless] {
     white-space: nowrap;
     color: white;
     font-size: 1.2em;
-    font-family: "Open Sans";
+    font-family: Verdana;
 }
 /*-------------------------------------*/
 
@@ -66,7 +66,7 @@ iframe[seamless] {
     width: 70%;
     /*padding: 0.3em;*/
     font-size: 1em;
-    font-family: "Open Sans";
+    font-family: Verdana;
     color: black;
 }
 .mainBody .left input {
@@ -90,43 +90,45 @@ iframe[seamless] {
 }
 .mainBody .left .bottom .switch button {
     margin: 0.5%;
-    padding: 0.3em;
+    /*padding: 0.3em;*/
     flex:1;
-    height: auto;
+    height: 35%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color .4s ease, border .4s ease;
     white-space: nowrap;
     font-size: 1em;
-    font-family: "Open Sans";
+    font-family: Verdana;
     font-weight: 600;
 }
 .mainBody .left .bottom .switch{
     display: flex;
-    align-items: baseline;
     height: auto;
     padding: 0.3em;
 }
-.mainBody .left .bottom .switch span.hrdwareActive {
+.mainBody .left .bottom .switch div.hrdwareActive {
     border: 3px solid #637ad1;
+    height: 38%;
+    width: 45%;
     font-weight: 600;
     border-radius: 5px;
-    padding: 0.2em;
+    padding-top: 0.5em;
     color: #637ad1;
-    width: 2em;
-    flex-grow: 1;
+    flex: 1;
+    box-sizing: border-box;
     text-align: center;
 }
-.mainBody .left .bottom .switch span.commsActive {
+.mainBody .left .bottom .switch div.commsActive {
     border: 3px solid green;
+    height: 38%;
+    width: 45%;
     font-weight: 600;
     border-radius: 5px;
-    padding: 0.2em;
+    padding-top: 0.5em;
     color: green;
-    display: none;
-    width: 2em;
-    flex-grow: 1;
+    flex: 1;
+    box-sizing: border-box;
     text-align: center;
 }
 .mainBody .left .bottom .switch button.disHardware {
@@ -136,13 +138,32 @@ iframe[seamless] {
     display: none;
     flex-grow: 3;
 }
+.mainBody .left .middle {
+    height: 30%;
+}
+.mainBody .left .middle input {
+    float: none;
+}
+.mainBody .left .middle .cntr {
+    text-align: center;
+    padding-top: 2%;
+}
 .mainBody .right {
     width: 30%;
-    padding: 0.3em;
     font-size: 1em;
-    font-family: "Open Sans";
+    font-family: Verdana;
     color: black;
     border-left: 1px solid #6c6c6c;
+}
+.mainBody .right .top {
+    border-bottom: 1px solid black;
+    padding: 0.3em;
+}
+.mainBody .right .top p {
+    margin: 0.2em 0;
+}
+.mainBody .right .bottom {
+    padding: 0.3em;
 }
 .mainBody .right input {
     width: 100%;

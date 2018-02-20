@@ -1,0 +1,259 @@
+<link rel="stylesheet" href="css/switches.css">
+<link rel="stylesheet" href="css/colors.css">
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+<div class="mainBody">
+    <div>
+        <p class="pLbl">Damper Interlock:</p>
+        <button id="switch1" class="greenBtn switchBtn" onclick="switchBtn(1)">OFF</button>
+        <button id="dmprInterlock" class="questionBtn"></button>
+    </div>
+    <div>
+        <p class="pLbl">Damper Control:</p>
+        <button id="switch2" class="greenBtn switchBtn" onclick="switchBtn(2)">OFF</button>
+        <button id="dmprCtrl" class="questionBtn"></button>
+    </div>
+    <div>
+        <p class="pLbl">Smoke On:</p>
+        <button id="switch3" class="greenBtn switchBtn" onclick="switchBtn(3)">OFF</button>
+        <button id="smokeOn" class="questionBtn"></button>
+    </div>
+    <div>
+        <p class="pLbl">Smoke Off:</p>
+        <button id="switch4" class="greenBtn switchBtn" onclick="switchBtn(4)">OFF</button>
+        <button id="smokeOff" class="questionBtn"></button>
+    </div>
+    <div>
+        <p class="pLbl">Speed Reference Smoke On:</p>
+        <button id="switch5" class="greenBtn switchBtn"  onclick="switchBtn(5)">OFF</button>
+        <button id="speedRef" class="questionBtn"></button>
+    </div>
+    <div class="showSpeed">
+        <p class="pLbl">Speed Ref. Smoke On:</p>
+        <div class="dspl">000 Hz</div>
+    </div>
+</div>
+<div class="footer">
+    <button onclick="openMain()">Main</button>
+    <button onclick="openVFDstatus()">VFD</br>Status</button>
+    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevSysPage()">Prev.<br />Page</a>
+    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
+    <button onclick="openSysSetup()">System</br>Setup</button>
+    <button onclick="openMaint()">Maint.</button>
+</div>
+<!-- Info Modal -->
+<div id="modalDamperInterlock" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>IF DAMPER INTERLOCK IS ON:</p>
+        </div>
+        <div class="modal-body">
+            <p>VFD's will run until damper end switch is closed and VFD's are enabled.</p>
+            <p><i>See Schematics for terminal block connections.</i></p>
+        </div>
+    </div>
+
+</div>
+
+<div id="modalDamperControl" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>IF DAMPER CONTROL IS ON:</p>
+        </div>
+        <div class="modal-body">
+            <p>Dampers will open when a run command is engaged.</p>
+            <p><i>See Schematics for terminal block connections.</i></p>
+        </div>
+    </div>
+
+</div>
+
+<div id="modalSmokeOff" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>IF SMOKE OFF IS ON:</p>
+        </div>
+        <div class="modal-body">
+            <p>VFD's will stop <br/>Note: Smoke On overrides Smoke off commands.</p>
+            <p><i>See Schematics for terminal block connections.</i></p>
+        </div>
+    </div>
+
+</div>
+
+<div id="modalSmokeOn" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>IF SMOKE ON IS ON:</p>
+        </div>
+        <div class="modal-body">
+            <p>VFD's will run <br/>Note: Stops commands will be ignored.</p>
+            <p><i>See Schematics for terminal block connections.</i></p>
+        </div>
+    </div>
+
+</div>
+
+<div id="modalSpeedRef" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>Speed reference:</p>
+        </div>
+        <div class="modal-body">
+            <p><b>IF ON: </b><br/>VFD's will run to a fix speed reference.</p>
+            <p><b>IF OFF: </b><br/>VFD's will run to set point being commanded.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+//    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+//    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+
+    var switchArr = [];
+    for (var i=0; i<5; i++) {
+        switchArr.push(document.getElementById('switch'+(i+1)));
+    }
+
+    function switchBtn(btn) {
+        switchArr.forEach(function (sw,index) {
+            if(btn === index+1) {
+                sw.innerHTML = 'ON';
+                sw.classList.remove('greenBtn');
+                sw.classList.add('redBtn');
+            }
+            else {
+                sw.innerHTML = 'OFF';
+                sw.classList.remove('redBtn');
+                sw.classList.add('greenBtn');
+            }
+            if(btn === 5) {
+                document.getElementsByClassName('showSpeed')[0].style.display = 'block';
+            }
+            else {
+                document.getElementsByClassName('showSpeed')[0].style.display = 'none';
+            }
+        });
+    }
+
+    /*------ Modal -----*/
+    // Get the modal
+    var modalDamperInterlock = document.getElementById('modalDamperInterlock');
+    var modalDamperCtrl = document.getElementById('modalDamperControl');
+    var modalSmokeOn = document.getElementById('modalSmokeOn');
+    var modalSmokeOff = document.getElementById('modalSmokeOff');
+    var modalSpeedRef = document.getElementById('modalSpeedRef');
+
+    // Get the button that opens the modal
+    var dmprInterlock = document.getElementById("dmprInterlock");
+    var dmprCtrl = document.getElementById("dmprCtrl");
+    var smokeOn = document.getElementById("smokeOn");
+    var smokeOff = document.getElementById("smokeOff");
+    var speedRef = document.getElementById("speedRef");
+
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close")[1];
+    var span3 = document.getElementsByClassName("close")[2];
+    var span4 = document.getElementsByClassName("close")[3];
+    var span5 = document.getElementsByClassName("close")[4];
+    console.log("span3",span3);
+
+    // When the user clicks the button, open the modal
+    dmprInterlock.onclick = function() {
+        modalDamperInterlock.style.display = "block";
+    };
+    dmprCtrl.onclick = function() {
+        modalDamperCtrl.style.display = "block";
+    };
+    smokeOn.onclick = function() {
+        modalSmokeOn.style.display = "block";
+    };
+    smokeOff.onclick = function() {
+        modalSmokeOff.style.display = "block";
+    };
+    speedRef.onclick = function() {
+        modalSpeedRef.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+        modalDamperInterlock.style.display = "none";
+    };
+    span2.onclick = function() {
+        modalDamperCtrl.style.display = "none";
+    };
+    span4.onclick = function() {
+        modalSmokeOn.style.display = "none";
+    };
+    span3.onclick = function() {
+        modalSmokeOff.style.display = "none";
+    };
+    span5.onclick = function() {
+        modalSpeedRef.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        console.log("target: ",event.target);
+        if (event.target === modalDamperInterlock) {
+            modalDamperInterlock.style.display = "none";
+        }
+        if (event.target === modalDamperCtrl) {
+            modalDamperCtrl.style.display = "none";
+        }
+        if (event.target === modalSmokeOn) {
+            modalSmokeOn.style.display = "none";
+        }
+        if (event.target === modalSmokeOff) {
+            modalSmokeOff.style.display = "none";
+        }
+        if (event.target === modalSpeedRef) {
+            modalSpeedRef.style.display = "none";
+        }
+    };
+
+    // ------ NAVIGATION -----
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP") {
+            window.location.href = "sysSetup2.html";
+        }
+    }
+    function prevSysPage() {
+        window.location.href = "valuesCFM.html";
+    }
+//    function nextSysPage() {
+//        window.location.href = "sysSetup2.html";
+//    }
+</script>
