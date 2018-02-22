@@ -1,36 +1,43 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">-->
+<!--<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">-->
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/colors.css">
-<!--<link rel='stylesheet' href="css/fonts/OpenSans-Regular.eot">-->
-<!--<link rel='stylesheet' href="css/fonts/OpenSans-Regular.ttf">-->
-<!--<link rel='stylesheet' href="css/fonts/OpenSans-Regular.woff">-->
-<!--<link rel='stylesheet' href="css/fonts/OpenSans-Regular.woff2">-->
+<script src='js/Config.js'></script>
+<script src='js/jquery.js'></script>
+<script src='js/jquery-ui.js'></script>
+<script src='js/DASH.js'></script>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
 
-<div class="display">
-    <div class="infoDisplay">
-        <div class="total">
+<div class="display row">
+    <div class="infoDisplay col-sm-9">
+        <div class="col-sm-3 noPadding">
             <h3>TOTAL CFM</h3>
             <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
         </div>
-        <div class="total">
+        <div class="col-sm-3 noPadding">
             <h3>TSP ACROSS FANWALL</h3>
             <div id="1-TOTAL DSP" class="blackDisplay">00.00" WC</div>
         </div>
-        <div class="total">
+        <div class="col-sm-3 noPadding">
             <h3 class="showDUCT">DUCT STATIC PRESSURE</h3>
             <div id="1-TOTAL DUCT" class="blackDisplay showDUCT">00.00" WC</div> <!-- check this ID -->
         </div>
     </div>
-    <div class="alertDisplay">
+    <div class="alertDisplay col-sm-3 noPadding">
         <div id="1-DAMPER STATE" class="damper">Damper End Switch Open</div><!--flashing when 1, hide when 0-->
         <div id="1-SMOKEON" class="smokeOn">SmokeON</div><!--display when 1, hide when 0-->
         <div id="2-COMMON ALARM" class="alarm">ALARM</div><!--flash when 1, hide when 0-->
     </div>
 </div>
-<div class="buttons">
-    <div class="left">
+<div class="buttons row">
+    <div class="left noPadding col-sm-4">
         <span id="hideForVFD">
             <button id="1-ENABLE OPTIMI" class="greenBtn" onclick="onManually()">MANUALLY</br>OPTIMIZE</button>
             <button id="3-ENABLE" class="redBtn" onclick="onAutoOpt()">ENABLE AUTO</br>OPTIMIZATION</button>
@@ -46,7 +53,7 @@
         </span>
     </div>
 
-    <div class="center">
+    <div class="center noPadding col-sm-4">
         <button id="1-GLOBAL START" class="start whiteBtn">GLOBAL</br>START</button>
         <button id="1-GLOBAL STOP F" class="stop whiteBtn">GLOBAL</br>STOP</button>
         <button id="1-ENABLE MANUAL" class="local whiteBtn" onclick="onLocalCtrl()">LOCAL</br>CONTROL</button>
@@ -55,7 +62,8 @@
             <p>SYSTEM IN LOCAL</p>
         </div>
     </div>
-    <div class="right showCFM">
+
+    <div class="right showCFM col-sm-4">
         <div class="part">
             <h3>ENTER CFM SET POINT</h3>
             <input id="1-CFM SETPOINT" type="number" class="blueDisplay" placeholder="000000 CFM" step="1" min="0"/>
@@ -65,7 +73,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showTSP">
+    <div class="right showTSP col-sm-4">
         <div class="part">
             <h3>ENTER TSP SET POINT</h3>
             <!-- not sure in ID here -->
@@ -76,7 +84,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showDUCT">
+    <div class="right showDUCT col-sm-4">
         <div class="part">
             <h3>ENTER DUCT SET POINT</h3>
             <!-- not sure in ID here -->
@@ -87,7 +95,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showVFD">
+    <div class="right showVFD col-sm-4">
         <h3>SPEED LIMITS</h3>
         <div class="part">
             <p>VFD MIN HZ</p>
@@ -101,15 +109,20 @@
     </div>
 </div>
 
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <button class="showPrev">3</button>
-    <button class="showNext">4</button>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+<div class="footer row">
+    <button class="col-sm-2" onclick="openMain()">Main</button>
+    <button class="col-sm-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev col-sm-2">3</button>
+    <button class="showNext col-sm-2">4</button>
+    <button class="col-sm-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-sm-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script>
+    // ALARM!!!
+//    var alarm = window.loadValue('1-ACTOPMODE');
+//    console.log("alarms: ",alarm);
+    //--------------
     var elmsCFM = document.getElementsByClassName("showCFM");
     var elmsTSP = document.getElementsByClassName("showTSP");
     var elmsDUCT = document.getElementsByClassName("showDUCT");

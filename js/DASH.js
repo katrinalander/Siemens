@@ -86,6 +86,7 @@ function getRequests(jid) {
         var host = configuration.uselocal ? location.hostname : configuration.host;
         var url = "http://" + host + "/json.html?" + dataSendString;
 
+        console.log("url: ",url);
         requests.push(url);
     }
 
@@ -479,6 +480,7 @@ function loadlastalarm() {
 }
 
 function loadClimatixValues() {
+    console.log("inside loadClimatixValues");
     try {
         $(document).ready(function () {
 
@@ -507,7 +509,7 @@ function loadClimatixValues() {
                     url: requestsInfo,
                     dataType: "jsonp",
                     success: function (data) {
-
+                        console.log("data: ",data);
                         data.forEach(function (value) {
 
                             dataPoints.forEach(function (element) {
@@ -823,11 +825,13 @@ function loadinfoled() {
 
 }
 
-function writevalue(watchpointID, newvalue) {
+function writeValue(watchpointID, newvalue) {
     writeDataToClimatix(watchpointID, newvalue);
 }
 
 function loadValue(datapoint, idelement) {
+    console.log("inside loadValue()");
+
     try {
 
             //datapoints.push(datapoint);
@@ -848,6 +852,7 @@ function loadValue(datapoint, idelement) {
                     url: requestsInfo,
                     dataType: "jsonp",
                     success: function (data) {
+                        console.log("data: ",data);
                         if (data.length <= 0)
                             return;
                         var val = data[0].value;
@@ -1111,7 +1116,8 @@ function setvalue(datapointIndexPage, datapointName, newValue) {
         window.open("ios://write?page=" + datapointIndexPage + "&name=" + datapointName + "&value=" + newValue);
         }
     else {
-        window.JSInterface.writeValue(datapointName, newValue); 
+        // window.JSInterface.writeValue(datapointName, newValue);
+        window.writeValue(datapointName, newValue);
     }
 }
 
