@@ -1,12 +1,8 @@
 body {
-    /*box-sizing: border-box;*/
     width: 100%;
     background-color: #ccc;
     font-family: Verdana;
     overflow: hidden;
-    /*font-size: 1em;*/
-    /*color: #000;*/
-    /*margin: 0;*/
 }
 
 iframe[seamless] {
@@ -25,7 +21,6 @@ iframe[seamless] {
     top: 0;
     background-color: rgba(0, 128, 0, 0.77);
     color: white;
-    /*margin-left: -5px;*/
 }
 .header h2 {
     padding: 2%;
@@ -42,13 +37,11 @@ iframe[seamless] {
     background-color: #ebebeb;
     color: white;
     margin: 0;
-    /*display: flex;*/
 }
 
 .footer button {
     background-color: #6c6c6c;
     margin: 0.5%;
-    /*flex:1;*/
     height: 90%;
     border: none;
     border-radius: 5px;
@@ -56,10 +49,8 @@ iframe[seamless] {
     transition: background-color .4s ease, border .4s ease;
     white-space: nowrap;
     color: white;
-    /*font-size: 1.2em;*/
     font-family: Verdana;
     vertical-align: middle;
-    /*margin-top: 1%;*/
     min-width: 14.5%;
     max-width: 14.5%;
 }

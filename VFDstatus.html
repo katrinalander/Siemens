@@ -1,51 +1,66 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/VFDstatus.css">
 <link rel="stylesheet" href="css/colors.css">
+<script src='js/Config.js'></script>
+<script src='js/jquery.js'></script>
+<script src='js/jquery-ui.js'></script>
+<script src='js/DASH.js'></script>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
+
 <div class="mainBody">
-    <div class="top">
-        <div class="left">
-            <div class="total">
+    <div class="top row">
+        <div class="left col-md-6 row">
+            <div class="total col-md-6">
                 <h3>TOTAL CFM</h3>
                 <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
             </div>
-            <div class="speed">
+            <div class="speed col-md-6">
                 <h3>ENTER SPEED</h3>
                 <input type="number" min="0" step="0.1" placeholder="000.0 Hz"/>
             </div>
         </div>
-        <div class="right">
-            <button style="align-self: flex-start;"></button>
+        <div class="right col-md-6">
+            <button style="background-color:inherit"></button>
             <button class="whiteBtn glblReset" onclick="onGlobalReset()">GLOBAL RESET</button>
             <button class="whiteBtn glblStart" onclick="onGlobalStart()">GLOBAL START</button>
             <button class="whiteBtn glblStop" onclick="onGlobalStop()">GLOBAL STOP</button>
         </div>
     </div>
-    <div class="bottom">
-        <div>
+    <div class="bottom row">
+        <div class="col-md-4">
             <!-- line 227 in exel, none WP mapping for both parameters -->
             <button id="fan0"></button>
             <button id="fan3"></button>
         </div>
-        <div>
+        <div class="col-md-4">
             <button id="fan1"></button>
             <button id="fan4"></button>
         </div>
-        <div>
+        <div class="col-md-4">
             <button id="fan2"></button>
             <button id="fan5"></button>
         </div>
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-        <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
-        <a class="rightButton showNext" onclick="nextPage()">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showNext arrow">
+        <div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>
+    </button>
+    <button class="col-lg-2 rightButton showNext arrow" onclick="nextPage()">
+        <div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>
+    </button>
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script src="js/VFD_CFM.js"></script>
 <script>
     // ------ NAVIGATION -----
@@ -65,7 +80,7 @@
         else if(sessionStorage.getItem("CTRL") === "VFD") {
             window.location.href = "sysSetup3.html";
         }
-        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+        else if(sessionStorage.getItem("CTRL") === "TSP") {
             window.location.href = "sysSetup2.html";
         }
     }

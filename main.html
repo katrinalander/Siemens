@@ -1,8 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
@@ -18,15 +15,15 @@
 <div class="display">
     <div class="infoDisplay col-sm-9 noPadding">
         <div class="col-sm-3 total noPadding">
-            <h3>TOTAL CFM</h3>
+            <p>TOTAL<br/>CFM</p>
             <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
         </div>
         <div class="col-sm-3 total noPadding">
-            <h3>TSP ACROSS FANWALL</h3>
+            <p>TSP ACROSS<br/>FANWALL</p>
             <div id="1-TOTAL DSP" class="blackDisplay">00.00" WC</div>
         </div>
         <div class="col-sm-3 total noPadding">
-            <h3 class="showDUCT">DUCT STATIC PRESSURE</h3>
+            <p class="showDUCT">DUCT STATIC<br/>PRESSURE</p>
             <div id="1-TOTAL DUCT" class="blackDisplay showDUCT">00.00" WC</div> <!-- check this ID -->
         </div>
     </div>
@@ -48,7 +45,7 @@
             <button id="1-ENABLE DSP CO" class="redBtn showDUCT" onclick="onDSPctrl()">ENABLE</br>DSP CONTROL</button>
         </span>
         <span class="speedVFD showVFD">
-            <h3>ENTER SPEED REFERENCE:</h3>
+            <p>ENTER SPEED REFERENCE:</p>
             <input id="1-VFD SPEED" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </span>
     </div>
@@ -70,38 +67,38 @@
 
     <div class="right showCFM noPadding col-lg-4">
         <div class="part">
-            <h3>ENTER CFM SET POINT</h3>
+            <p>ENTER CFM SET POINT</p>
             <input id="1-CFM SETPOINT" type="number" class="blueDisplay" placeholder="000000 CFM" step="1" min="0"/>
         </div>
         <div class="part">
-            <h3>ENTER SPEED REFERENCE</h3>
+            <p>ENTER SPEED REFERENCE</p>
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
     <div class="right showTSP noPadding col-lg-4">
         <div class="part">
-            <h3>ENTER TSP SET POINT</h3>
+            <p>ENTER TSP SET POINT</p>
             <!-- not sure in ID here -->
             <input id="1-TSP SETPOINT" type="number" class="blueDisplay" placeholder="00.00 w.c" step="1" min="0"/>
         </div>
         <div class="part">
-            <h3>ENTER SPEED REFERENCE</h3>
+            <p>ENTER SPEED REFERENCE</p>
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
     <div class="right showDUCT noPadding col-lg-4">
         <div class="part">
-            <h3>ENTER DUCT SET POINT</h3>
+            <p>ENTER DUCT SET POINT</p>
             <!-- not sure in ID here -->
             <input id="1-DSP SETPOINT" type="number" class="blueDisplay" placeholder="00.00 w.c" step="1" min="0"/>
         </div>
         <div class="part">
-            <h3>ENTER SPEED REFERENCE</h3>
+            <p>ENTER SPEED REFERENCE</p>
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
     <div class="right showVFD noPadding col-lg-4">
-        <h3>SPEED LIMITS</h3>
+        <p>SPEED LIMITS</p>
         <div class="part">
             <p>VFD MIN HZ</p>
             <!-- not sure in ID here -->
