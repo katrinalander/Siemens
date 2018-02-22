@@ -1,37 +1,41 @@
 body {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     width: 100%;
     background-color: #ccc;
     font-family: Verdana;
+    overflow: hidden;
     /*font-size: 1em;*/
-    color: #000;
-    margin: 0;
+    /*color: #000;*/
+    /*margin: 0;*/
 }
 
 iframe[seamless] {
     border: none;
     height: 100%;
-    width: 100%;
+    width: 105%;
     position: absolute;
+    overflow: hidden;
 }
 
 .header {
     position: relative;
     font-family: Verdana;
-    width: 100%;
+    width: 105%;
     height: 10%;
     top: 0;
     background-color: rgba(0, 128, 0, 0.77);
     color: white;
+    /*margin-left: -5px;*/
 }
 .header h2 {
-    padding: 1%;
-    /*font-size: 1.2em;*/
+    padding: 2%;
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
 .footer {
     position: absolute;
-    left: 0;
+    left: 16px;
     bottom: 0;
     width: 100%;
     height: 20%;
@@ -54,6 +58,10 @@ iframe[seamless] {
     color: white;
     /*font-size: 1.2em;*/
     font-family: Verdana;
+    vertical-align: middle;
+    /*margin-top: 1%;*/
+    min-width: 14.5%;
+    max-width: 14.5%;
 }
 
 .col-sm-2 {
@@ -69,13 +77,15 @@ iframe[seamless] {
     text-align: center;
 }
 .display .infoDisplay {
-    width: 75%;
+    min-width: 75%;
     height: 100%;
     float: left;
     /*display: flex;*/
 }
 .display .infoDisplay .total {
-    /*width: 50%;*/
+    min-width: 32%;
+    max-width: 34%;
+    float: left;
 }
 .display .infoDisplay .total h3 {
     /*font-size: 1em;*/
@@ -84,9 +94,9 @@ iframe[seamless] {
     height: 43%;
 }
 .display .alertDisplay {
-    width: 23%;
+    max-width: 22%;
     /*height: 125%;*/
-    /*float: right;*/
+    float: right;
     /*margin-top: -6.2%;*/
     /*position: relative;*/
 }
@@ -143,13 +153,14 @@ iframe[seamless] {
 .buttons {
     height: 40%;
     margin: 0;
-    padding: 1%;
+    /*padding: 1%;*/
     /*display: flex;*/
 }
 /* LEFT PART in buttons */
 .left {
     float: left;
-    width: 30%;
+    min-width: 30%;
+    max-width: 31%;
 }
 .left button {
     color: white;
@@ -180,13 +191,14 @@ iframe[seamless] {
 
 /* RIGHT PART in buttons */
 .right {
-    float: right;
+    float: left;
     text-align: center;
-    width: 31%;
+    min-width: 31.5%;
+    max-width: 31.5%;
     height: 100%;
     border: 2px solid #6c6c6c;
     border-radius: 5px;
-    margin: 2px;
+    /*margin: 2px;*/
 }
 .right h3 {
     margin: 0.2em;
@@ -216,7 +228,9 @@ iframe[seamless] {
 
 /* CENTRAL PART in buttons */
 .center {
-    width: 38%;
+    min-width: 34%;
+    max-width: 35%;
+    float:left;
 }
 
 .center button {
@@ -232,28 +246,34 @@ iframe[seamless] {
 
 .center button.start {
     color: green;
-    width: 47.5%;
+    max-width: 47.5%;
+    min-width: 47%;
     height: 32%;
 }
 .center button.stop {
     color: red;
-    width: 47.5%;
+    max-width: 47.5%;
+    min-width: 47%;
     height: 32%;
 }
 .center button.local {
     color: darkorange;
-    width: 47.5%;
+    max-width: 47.5%;
+    min-width: 47%;
     height: 32%;
 }
 .center button.remote {
     color: #637ad1;
-    width: 47.5%;
+    max-width: 47.5%;
+    min-width: 47%;
     height: 32%;
 }
 .center div.system {
     border: 2px solid darkorange;
     color: darkorange;
-    width: 100%;
+    min-width: 97%;
+    max-width: 97%;
+    float: left;
     height: 32%;
     text-align: center;
     /*font-size: 1.2em;*/
@@ -261,4 +281,9 @@ iframe[seamless] {
     font-family: Verdana;
     border-radius: 5px;
     box-sizing: border-box;
+}
+.col-lg-10 {
+    text-align: center;
+    padding: 0;
+    align-content: center;
 }

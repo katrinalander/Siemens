@@ -1,10 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">-->
-<!--<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/colors.css">
 <script src='js/Config.js'></script>
@@ -15,17 +15,17 @@
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
 
-<div class="display row">
-    <div class="infoDisplay col-sm-9">
-        <div class="col-sm-3 noPadding">
+<div class="display">
+    <div class="infoDisplay col-sm-9 noPadding">
+        <div class="col-sm-3 total noPadding">
             <h3>TOTAL CFM</h3>
             <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
         </div>
-        <div class="col-sm-3 noPadding">
+        <div class="col-sm-3 total noPadding">
             <h3>TSP ACROSS FANWALL</h3>
             <div id="1-TOTAL DSP" class="blackDisplay">00.00" WC</div>
         </div>
-        <div class="col-sm-3 noPadding">
+        <div class="col-sm-3 total noPadding">
             <h3 class="showDUCT">DUCT STATIC PRESSURE</h3>
             <div id="1-TOTAL DUCT" class="blackDisplay showDUCT">00.00" WC</div> <!-- check this ID -->
         </div>
@@ -36,8 +36,8 @@
         <div id="2-COMMON ALARM" class="alarm">ALARM</div><!--flash when 1, hide when 0-->
     </div>
 </div>
-<div class="buttons row">
-    <div class="left noPadding col-sm-4">
+<div class="buttons col-lg-12">
+    <div class="left noPadding col-lg-4">
         <span id="hideForVFD">
             <button id="1-ENABLE OPTIMI" class="greenBtn" onclick="onManually()">MANUALLY</br>OPTIMIZE</button>
             <button id="3-ENABLE" class="redBtn" onclick="onAutoOpt()">ENABLE AUTO</br>OPTIMIZATION</button>
@@ -53,17 +53,22 @@
         </span>
     </div>
 
-    <div class="center noPadding col-sm-4">
-        <button id="1-GLOBAL START" class="start whiteBtn">GLOBAL</br>START</button>
-        <button id="1-GLOBAL STOP F" class="stop whiteBtn">GLOBAL</br>STOP</button>
-        <button id="1-ENABLE MANUAL" class="local whiteBtn" onclick="onLocalCtrl()">LOCAL</br>CONTROL</button>
-        <button class="remote whiteBtn" onclick="onRemoteCtrl()">REMOTE</br>CONTROL</button>
-        <div class="system">
+    <div class="center noPadding col-lg-4">
+        <div class="col-lg-12 noPadding">
+            <button id="1-GLOBAL START" class="start whiteBtn col-sm-6">GLOBAL</br>START</button>
+            <button id="1-GLOBAL STOP F" class="stop whiteBtn col-sm-6">GLOBAL</br>STOP</button>
+        </div>
+        <div class="col-lg-12 noPadding">
+            <button id="1-ENABLE MANUAL" class="local whiteBtn col-sm-6" onclick="onLocalCtrl()">LOCAL</br>CONTROL</button>
+            <button class="remote whiteBtn col-sm-6" onclick="onRemoteCtrl()">REMOTE</br>CONTROL</button>
+        </div>
+
+        <div class="system col-lg-12 noPadding">
             <p>SYSTEM IN LOCAL</p>
         </div>
     </div>
 
-    <div class="right showCFM col-sm-4">
+    <div class="right showCFM noPadding col-lg-4">
         <div class="part">
             <h3>ENTER CFM SET POINT</h3>
             <input id="1-CFM SETPOINT" type="number" class="blueDisplay" placeholder="000000 CFM" step="1" min="0"/>
@@ -73,7 +78,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showTSP col-sm-4">
+    <div class="right showTSP noPadding col-lg-4">
         <div class="part">
             <h3>ENTER TSP SET POINT</h3>
             <!-- not sure in ID here -->
@@ -84,7 +89,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showDUCT col-sm-4">
+    <div class="right showDUCT noPadding col-lg-4">
         <div class="part">
             <h3>ENTER DUCT SET POINT</h3>
             <!-- not sure in ID here -->
@@ -95,7 +100,7 @@
             <input id="1-VFD SPEED OIF" type="number" class="blueDisplay" placeholder="000.0 Hz" step="0.1" min="0" />
         </div>
     </div>
-    <div class="right showVFD col-sm-4">
+    <div class="right showVFD noPadding col-lg-4">
         <h3>SPEED LIMITS</h3>
         <div class="part">
             <p>VFD MIN HZ</p>
@@ -109,13 +114,13 @@
     </div>
 </div>
 
-<div class="footer row">
-    <button class="col-sm-2" onclick="openMain()">Main</button>
-    <button class="col-sm-2" onclick="openVFDstatus()">VFD</br>Status</button>
-    <button class="showPrev col-sm-2">3</button>
-    <button class="showNext col-sm-2">4</button>
-    <button class="col-sm-2" onclick="openSysSetup()">System</br>Setup</button>
-    <button class="col-sm-2" onclick="openMaint()">Maint.</button>
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev col-lg-2">3</button>
+    <button class="showNext col-lg-2">4</button>
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
 
 <script>
