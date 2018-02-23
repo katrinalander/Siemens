@@ -4,7 +4,7 @@ if(!sessionStorage.getItem("VFD")) {
     newVFD = [];
     if (VFD.length >6) {
         document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-        document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+        // document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
         numPages = Math.ceil(VFD.length / 6);
         console.log("numPages="+numPages);
         index=0;
@@ -23,7 +23,7 @@ else {
     VFD = JSON.parse(sessionStorage.getItem("VFD"));
     if (VFD.length >6) {
         document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-        document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+        // document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
         numPages = Math.ceil(VFD.length / 6);
         console.log("numPages="+numPages);
     }

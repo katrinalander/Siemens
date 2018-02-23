@@ -14,11 +14,11 @@ function updateSessionStorage(VFD,newVFD) {
 
 if (page > 0) { //show PREV PAGE button
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+    // document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 }
 if ((page+1) < newVFD.length) { //show NEXT PAGE button
     document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+    // document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
 }
 
 newVFD[page].forEach(function (vfd, index) {

@@ -6,8 +6,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VFDstatus.html" afterPath="$PROJECT_DIR$/VFDstatus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/VFDstatus.css" afterPath="$PROJECT_DIR$/css/VFDstatus.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/colors.css" afterPath="$PROJECT_DIR$/css/colors.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.html" afterPath="$PROJECT_DIR$/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/VFD_CFM.js" afterPath="$PROJECT_DIR$/js/VFD_CFM.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/nextVFD_CFM.js" afterPath="$PROJECT_DIR$/js/nextVFD_CFM.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nextVFD_CFM.html" afterPath="$PROJECT_DIR$/nextVFD_CFM.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,11 +41,43 @@
       <file leaf-file-name="VFDstatus.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VFDstatus.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="32" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
+            <state relative-caret-position="295">
+              <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nextVFD_CFM.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nextVFD_CFM.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nextVFD_CFM.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/nextVFD_CFM.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VFDstatus.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,30 +85,8 @@
       <file leaf-file-name="VFD_CFM.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/VFD_CFM.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nextVFD_CFM.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nextVFD_CFM.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="52" column="71" lean-forward="false" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VFDstatus.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
+            <state relative-caret-position="36">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -115,12 +125,10 @@
       <file leaf-file-name="colors.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/colors.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="315" column="21" lean-forward="false" selection-start-line="315" selection-start-column="21" selection-end-line="315" selection-end-column="21" />
+            <state relative-caret-position="261">
+              <caret line="221" column="15" lean-forward="true" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
               <folding>
                 <element signature="e#10764#10983#0" expanded="false" />
-                <element signature="e#11001#11288#0" expanded="false" />
-                <element signature="e#11302#11518#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,11 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bu</find>
-      <find>.butt</find>
-      <find>total</find>
-      <find>disp</find>
-      <find>.left</find>
       <find>.cent</find>
       <find>.info</find>
       <find>if</find>
@@ -165,10 +168,15 @@
       <find>.foo</find>
       <find>tota</find>
       <find>show</find>
-      <find>.ri</find>
       <find>rightButton</find>
-      <find>showNext</find>
       <find>font-si</find>
+      <find>.left</find>
+      <find>.ri</find>
+      <find>black</find>
+      <find>leftB</find>
+      <find>showNext</find>
+      <find>.total</find>
+      <find>bla</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,7 +190,6 @@
         <option value="$PROJECT_DIR$/second.html" />
         <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/Adam.html" />
-        <option value="$PROJECT_DIR$/js/nextVFD_CFM.js" />
         <option value="$PROJECT_DIR$/sysSetupNext2.html" />
         <option value="$PROJECT_DIR$/js/maint.js" />
         <option value="$PROJECT_DIR$/css/ctrlSelect.css" />
@@ -212,11 +219,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/main.html" />
-        <option value="$PROJECT_DIR$/css/colors.css" />
         <option value="$PROJECT_DIR$/js/VFD_CFM.js" />
-        <option value="$PROJECT_DIR$/VFDstatus.html" />
-        <option value="$PROJECT_DIR$/css/VFDstatus.css" />
+        <option value="$PROJECT_DIR$/js/nextVFD_CFM.js" />
         <option value="$PROJECT_DIR$/nextVFD_CFM.html" />
+        <option value="$PROJECT_DIR$/VFDstatus.html" />
+        <option value="$PROJECT_DIR$/css/colors.css" />
+        <option value="$PROJECT_DIR$/css/VFDstatus.css" />
       </list>
     </option>
   </component>
@@ -227,10 +235,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
-    <option name="y" value="67" />
-    <option name="width" value="1192" />
-    <option name="height" value="779" />
+    <option name="x" value="-50" />
+    <option name="y" value="66" />
+    <option name="width" value="1246" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -412,25 +420,25 @@
       <workItem from="1518475751445" duration="47270000" />
       <workItem from="1518810897671" duration="6456000" />
       <workItem from="1518963505954" duration="3643000" />
-      <workItem from="1519059865033" duration="55478000" />
+      <workItem from="1519059865033" duration="58588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165388000" />
+    <option name="totallyTimeSpent" value="168498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="67" width="1192" height="779" extended-state="0" />
+    <frame x="-50" y="66" width="1246" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30230573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13537118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20494185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -838,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/nextVFD_CFM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="78" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -859,51 +859,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/colors.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="315" column="21" lean-forward="false" selection-start-line="315" selection-start-column="21" selection-end-line="315" selection-end-column="21" />
-          <folding>
-            <element signature="e#10764#10983#0" expanded="false" />
-            <element signature="e#11001#11288#0" expanded="false" />
-            <element signature="e#11302#11518#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/VFD_CFM.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="36">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+    <entry file="file://$PROJECT_DIR$/js/nextVFD_CFM.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="32" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="32" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nextVFD_CFM.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="52" column="71" lean-forward="false" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+        <state relative-caret-position="328">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/colors.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="221" column="15" lean-forward="true" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
+          <folding>
+            <element signature="e#10764#10983#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
