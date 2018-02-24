@@ -1,30 +1,40 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/switches.css">
 <link rel="stylesheet" href="css/colors.css">
+<style>
+    p {
+        font-size: 1.5em;
+    }
+</style>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
+
 <div class="mainBody">
-    <div>
+    <div style="height: 10%">
         <p class="pLbl">Damper Interlock:</p>
         <button id="switch1" class="greenBtn switchBtn" onclick="switchBtn(1)">OFF</button>
         <button id="dmprInterlock" class="questionBtn"></button>
     </div>
-    <div>
+    <div style="height: 10%">
         <p class="pLbl">Damper Control:</p>
         <button id="switch2" class="greenBtn switchBtn" onclick="switchBtn(2)">OFF</button>
         <button id="dmprCtrl" class="questionBtn"></button>
     </div>
-    <div>
+    <div style="height: 10%">
         <p class="pLbl">Smoke On:</p>
         <button id="switch3" class="greenBtn switchBtn" onclick="switchBtn(3)">OFF</button>
         <button id="smokeOn" class="questionBtn"></button>
     </div>
-    <div>
+    <div style="height: 10%">
         <p class="pLbl">Smoke Off:</p>
         <button id="switch4" class="greenBtn switchBtn" onclick="switchBtn(4)">OFF</button>
         <button id="smokeOff" class="questionBtn"></button>
     </div>
-    <div>
+    <div style="height: 10%">
         <p class="pLbl">Speed Reference Smoke On:</p>
         <button id="switch5" class="greenBtn switchBtn"  onclick="switchBtn(5)">OFF</button>
         <button id="speedRef" class="questionBtn"></button>
@@ -34,14 +44,20 @@
         <div class="dspl">000 Hz</div>
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevSysPage()">Prev.<br />Page</a>
-    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevSysPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext" onclick="nextSysPage()">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <!-- Info Modal -->
 <div id="modalDamperInterlock" class="modal">
 
@@ -127,7 +143,7 @@
 //    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
 //    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+//    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 
     var switchArr = [];
     for (var i=0; i<5; i++) {

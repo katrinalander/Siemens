@@ -1,44 +1,68 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/sysSetup.css">
 <link rel="stylesheet" href="css/colors.css">
+
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
-<div class="mainBody">
-    <div class="left">
+
+<div class="mainBody noPadding col-sm-12">
+    <div class="left col-sm-9">
         <div class="top">
+            <br />
             <p>VFD HI HZ Change Max. Freq. Limit</p>
             <input type="number" min="60" max="1800" step="1" placeholder="000 Hz">
         </div>
         <div class="bottom">
-            <p>CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
+            <br />
+            <p style="text-align: center">CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
 
-            <div id="1-ENABLEDISABLE" class="switch">
-                <button class="disHardware greenBtn" onclick="clickHardware()">ENABLE COMMS<br/>DISABLE HARDWARE</button>
-                <button class="disComms blueBtn" onclick="clickHardware()">ENABLE HARDWARE<br/>DISABLE COMMS</button>
+            <div id="1-ENABLEDISABLE" class="switch col-xs-12">
+                <button class="disHardware col-xs-9 greenBtn" onclick="clickHardware()">ENABLE COMMS<br/>DISABLE HARDWARE</button>
+                <button class="disComms col-xs-9 blueBtn" onclick="clickHardware()">ENABLE HARDWARE<br/>DISABLE COMMS</button>
 
-                <div class="hrdwareActive">HARDWARE<br/>ACTIVE</div>
-                <div class="commsActive">COMMS<br/>ACTIVE</div>
+                <div class="hrdwareActive col-xs-3">HARDWARE<br/>ACTIVE</div>
+                <div class="commsActive  col-xs-3">COMMS<br/>ACTIVE</div>
             </div>
         </div>
     </div>
-    <div class="right" style="text-align:center">
+    <div class="right noPadding col-sm-3" style="text-align:center">
+        <br />
         <p>AIRFLOW ADJUSTMENT Adjust Cone<br/>Constant to<br/>much airflow</p>
+        <br />
         <input style="width:40%;margin-top:-3px;" placeholder="+0000" type="number" class="blueDisplay"/>
-        <br/>
+        <br />
         <p>Cone Constant</p>
+        <br />
         <div style="display: flex;justify-content: center;">
             <input style="width:30%" placeholder="0000" class="blueDisplay">
             <button id="question" class="questionBtn"></button>
         </div>
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD<br/>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
-    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System<br/>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<!--<div class="footer">-->
+    <!--<button onclick="openMain()">Main</button>-->
+    <!--<button onclick="openVFDstatus()">VFD<br/>Status</button>-->
+    <!--<span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>-->
+    <!--<a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>-->
+    <!--<button onclick="openSysSetup()">System<br/>Setup</button>-->
+    <!--<button onclick="openMaint()">Maint.</button>-->
+<!--</div>-->
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext" onclick="nextSysPage()">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
 
 <!-- Info Modal -->
@@ -61,7 +85,7 @@
 
 <script>
     document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+//    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
     //------ Navigation ---------
     function openMaint() {
         window.location.href = "maint.html";

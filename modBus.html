@@ -1,3 +1,7 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/modBus.css">
 <link rel="stylesheet" href="css/colors.css">
 
@@ -6,47 +10,52 @@
 </div>
 
 <div class="mainBody">
-    <div class="line">
-        <div style="flex:2" class="padding2"><button class="greyBtn">PASSIVE</button><button style="margin-left:3px;" class="greyBtn">ACTIVE</button></div>
-        <div style="flex:1" class="padding2">Channel 1</div><div style="flex:1;" class="padding2">Channel 2</div>
+    <div class="col-md-12 line">
+        <div class="col-md-4 padding2"><button class="greyBtn">PASSIVE</button><button style="margin-left:3px;" class="greyBtn">ACTIVE</button></div>
+        <div class="col-md-4 padding2">Channel 1</div>
+        <div class="col-md-4 padding2">Channel 2</div>
     </div>
-    <div class="line">
-        <div style="flex:2" class="padding2">
+    <div class="col-md-12 line">
+        <div class="col-md-4 padding2">
             ENTER MODBUS BAUDRATE
         </div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="00000"></div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="00000"></div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="00000"></div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="00000"></div>
     </div>
-    <div class="line">
-        <div style="flex:2" class="padding2">ENTER MODBUS SLAVE ADDRESS</div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="000"></div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="000"></div>
+    <div class="col-md-12 line">
+        <div class="col-md-4 padding2">ENTER MODBUS SLAVE ADDRESS</div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="000"></div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="000"></div>
     </div>
-    <div class="line">
-        <div style="flex:2" class="padding1">ENTER (0 OR 1)<br/>0 = 1 stop bits<br/>1 = 2 stop bits</div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="0"></div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="0"></div>
+    <div class="col-md-12 line">
+        <div class="col-md-4 padding1">ENTER (0 OR 1)<br/>0 = 1 stop bits<br/>1 = 2 stop bits</div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="0"></div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="0"></div>
     </div>
-    <div class="line">
-        <div style="flex:2" class="padding1">ENTER PARITY<br/>0 = even, 1 = odd,<br/>2 = none</div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="0"></div>
-        <div style="flex:1" class="padding2"><input type="number" placeholder="0"></div>
+    <div class="col-md-12 line">
+        <div class="col-md-4 padding1">ENTER PARITY<br/>0 = even, 1 = odd,<br/>2 = none</div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="0"></div>
+        <div class="col-md-4 padding2"><input type="number" placeholder="0"></div>
     </div>
 </div>
 
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>
-    <a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
 
 <script>
 
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+//    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 
     // ------ NAVIGATION -----
     function openMaint() {

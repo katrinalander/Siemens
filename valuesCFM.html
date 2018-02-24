@@ -1,29 +1,44 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/sysSetup.css">
 <link rel="stylesheet" href="css/colors.css">
-<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
+<style>
+    p{
+        font-size: 1.5em;
+    }
+    div {
+        font-size: 1.2em;
+    }
+</style>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
+
 <div>
     <p style="text-align:center"><b>CFM VALUES</b></p>
-    <div id="listOfCFM">
-        <!--<div class="leftList"></div>-->
-        <!--<div class="rightList"></div>-->
-    </div>
+    <div id="listOfCFM"></div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD<br/>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevSysPage()">Prev.<br />Page</a>
-    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System<br/>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevSysPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext" onclick="nextSysPage()">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script>
     document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+//    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+//    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 
     //--------- List of FANS -----------
     var fans = [{0:1234},{1:2345},{2:3456},{3:4567},{4:5678},{5:''},{6:7890},{7:8901},{8:9012},

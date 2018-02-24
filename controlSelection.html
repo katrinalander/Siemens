@@ -1,43 +1,50 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/ctrlSelect.css">
 <link rel="stylesheet" href="css/colors.css">
-<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
+
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
-<div class="display">
-    <div id="CFM" class="settingCard" onclick="selectCard('CFM')">
+
+<div class="col-md-12">
+    <div id="CFM" class="settingCard col-md-3" onclick="selectCard('CFM')">
         <label>CFM<br />Control</label>
         <button class="whiteBtn">Enable</button>
         <label>MAX<br/>CFM:</label>
         <input type="number" placeholder="000000">
     </div>
-    <div id="TSP" class="settingCard" onclick="selectCard('TSP')">
+    <div id="TSP" class="settingCard col-md-3" onclick="selectCard('TSP')">
         <label>Static<br/>Pressure Control</label>
         <button class="whiteBtn">Enable</button>
         <label>MAX<br/>TSP:</label>
         <input type="number" placeholder="00.0">
     </div>
-    <div id="DUCT" class="settingCard" onclick="selectCard('DUCT')">
+    <div id="DUCT" class="settingCard col-md-3" onclick="selectCard('DUCT')">
         <label>Duct Static Pressure Control</label>
         <button class="whiteBtn">Enable</button>
         <label>MAX<br/>DP "w.c.:</label>
         <input type="number" placeholder="00.0">
     </div>
-    <div id="VFD" class="settingCard" onclick="selectCard('VFD')">
+    <div id="VFD" class="settingCard col-md-3" onclick="selectCard('VFD')">
         <label>VFD<br />Control</label>
         <button class="whiteBtn">Enable</button>
         <label>MAX<br/>SPEED:</label>
         <input type="number" placeholder="000.0">
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <button class="showPrev"></button>
-    <button class="showNext"></button>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev col-lg-2">3</button>
+    <button class="showNext col-lg-2">4</button>
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script>
     var cards = ['CFM','TSP','DUCT','VFD'];
     if(sessionStorage.getItem("CTRL") === "CFM") {

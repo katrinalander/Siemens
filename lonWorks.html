@@ -1,5 +1,17 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/lonWorks.css">
 <link rel="stylesheet" href="css/colors.css">
+<style>
+    h3 {
+        font-size: 1.8em;
+    }
+    p,input {
+        font-size: 1.5em;
+    }
+</style>
 
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
@@ -7,27 +19,31 @@
 
 <div>
     <h3 style="text-align: center">LONWORKS SETUP</h3>
-    <div class="line">
-        <p class="lbl">Neuron ID </p><p id="neuron" style="flex:1;margin-right:2%;margin-left:2%;"></p>
+    <div class="col-md-12">
+        <p style="text-align: right" class="col-md-6">Neuron ID </p><p style="text-align: left" id="neuron" class="col-md-6"></p>
     </div>
-    <div class="line">
-        <p class="lbl">Send Heartbeat </p><input id="send" class="data" readonly />
+    <div class="col-md-12">
+        <p style="text-align: right" class="col-md-6">Send Heartbeat </p><input id="send" class="col-md-4" readonly />
     </div>
-    <div class="line">
-        <p class="lbl">Receive Heartbeat </p><input id="receive" class="data" readonly />
+    <div class="col-md-12">
+        <p style="text-align: right" class="col-md-6">Receive Heartbeat </p><input id="receive" class="col-md-4" readonly />
     </div>
-    <div class="line">
-        <p class="lbl">Minimum Send Time </p><input id="minimum" class="data" readonly />
+    <div class="col-md-12">
+        <p style="text-align: right" class="col-md-6">Minimum Send Time </p><input id="minimum" class="col-md-4" readonly />
     </div>
 </div>
 
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>
-    <a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
 
 <script>
@@ -38,7 +54,7 @@
     var minH = '000000000';
 
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+//    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 
     document.getElementById('neuron').innerHTML = neuronID;
     document.getElementById('send').value = sendH;

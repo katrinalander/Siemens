@@ -1,40 +1,52 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/maint.css">
 <link rel="stylesheet" href="css/colors.css">
-<!--<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>-->
+
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
+
 <div class="display">
-    <div class="prmtr">
-        <div class="lbl">PARAMETER FEATURES:</div>
-        <div class="btns">
-            <div style="display: flex">
-                <button class="save drkBlueBtn">SAVE</button>
-                <button class="load greenBtn">LOAD</button>
-            </div>
-            <button class="cycle greyBtn">CYCLE POWER</button>
+    <div class="col-md-2"></div>
+    <div class="prmtr col-md-8">
+        <div class="lbl col-md-3">PARAMETER FEATURES:</div>
+        <div class="btns col-md-9">
+            <!--<div class="col-md-">-->
+                <button class="save col-md-6 drkBlueBtn">SAVE</button>
+                <button class="load col-md-6 greenBtn">LOAD</button>
+            <!--</div>-->
+            <button class="cycle col-md-12 greyBtn">CYCLE POWER</button>
         </div>
     </div>
-    <div class="maintBtns">
-        <button class="maintBtn whiteBtn" onclick="openCtrlSelect()">Control<br/>Selection</button>
-        <button id="slct" class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>
-        <button id="bac" class="maintBtn whiteBtn" onclick="openBacnet()">BACnet<br/>Setup</button>
-        <button id="lonWorks" class="maintBtn whiteBtn" onclick="openLonWorks()">LonWorks<br/>Setup</button>
-        <button id="modBus" class="maintBtn whiteBtn" onclick="openModBus()">ModBus<br/>Setup</button>
-    </div>
-    <div class="maintBtns">
-        <button class="maintBtn whiteBtn" onclick="openVersion()">Version</button>
-        <button id="password" class="maintBtn whiteBtn">Password<br/>Management</button>
+    <div class="col-md-2"></div>
+    <div class="maintBtns col-md-10">
+
+        <button class="maintBtn col-md-6 whiteBtn" onclick="openCtrlSelect()">Control<br/>Selection</button>
+
+        <!--<button id="slct" class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>-->
+        <button id="bac" class="maintBtn col-md-6 whiteBtn" onclick="openBacnet()">BACnet<br/>Setup</button>
+        <button id="lonWorks" class="maintBtn col-md-6 whiteBtn" onclick="openLonWorks()">LonWorks<br/>Setup</button>
+        <button id="modBus" class="maintBtn col-md-6 whiteBtn" onclick="openModBus()">ModBus<br/>Setup</button>
+
+        <button class="maintBtn col-md-6 whiteBtn" onclick="openVersion()">Version</button>
+
+        <button id="password" class="maintBtn col-md-6 whiteBtn">Password<br/>Management</button>
+
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <button class="showPrev"></button>
-    <button class="showNext"></button>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="showPrev col-lg-2">3</button>
+    <button class="showNext col-lg-2">4</button>
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <!-- The Modal of Users -->
 <div id="modal" class="modal">
 
@@ -61,21 +73,21 @@
         </div>
         <div class="modal-body">
             <div class="showUser">
-                <div class="line">
-                    <p class="userInput">User:</p>
-                    <div class="userInput" id="userName"></div>
+                <div class="line col-md-10">
+                    <p class="col-md-6">User:</p>
+                    <div class="col-md-6" id="userName"></div>
                 </div>
-                <div class="line">
-                    <p class="userInput">Password:</p>
-                    <div class="userInput" id="pass"></div>
+                <div class="line col-md-10">
+                    <p class="col-md-6">Password:</p>
+                    <div class="col-md-6" id="pass"></div>
                 </div>
-                <div class="line">
-                    <p class="userInput">Group:</p>
-                    <div class="userInput" id="group"></div>
+                <div class="line col-md-10">
+                    <p class="col-md-6">Group:</p>
+                    <div class="col-md-6" id="group"></div>
                 </div>
-                <div class="line">
-                    <p class="userInput">Logoff time:</p>
-                    <div class="userInput" id="time"></div>
+                <div class="line col-md-10">
+                    <p class="col-md-6">Logoff time:</p>
+                    <div class="col-md-6" id="time"></div>
                 </div>
             </div>
         </div>
@@ -88,9 +100,9 @@
 
 <script src="js/maint.js"></script>
 <script>
-    var BACnet = true;
+    var BACnet = false;
     var LonWorks = false;
-    var ModBus = false;
+    var ModBus = true;
 
     if(BACnet) {
         document.getElementById('bac').style.display = 'block';

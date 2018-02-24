@@ -75,11 +75,13 @@ function returnName(user) {
 for (var u in Users) {
     var newElement = document.createElement('div');
     var newName = document.createElement('span');
+    newName.className = "col-md-6";
     newName.innerHTML = Users[u].user;
     var newGroup = document.createElement('span');
+    newGroup.className = "col-md-6";
     newGroup.innerHTML = Users[u].group;
     newElement.id = u;
-    newElement.className = "user";
+    newElement.className = "col-md-12";
     newElement.appendChild(newName);
     newElement.appendChild(newGroup);
     newElement.addEventListener("click", returnName(Users[u]));

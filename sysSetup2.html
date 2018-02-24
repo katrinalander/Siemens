@@ -1,29 +1,39 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/sysSetup.css">
 <link rel="stylesheet" href="css/colors.css">
+
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
-<div class="mainBody">
-    <div class="left">
+
+<div class="mainBody noPadding col-sm-12">
+    <div class="left col-sm-9">
         <div style="border-bottom: 1px solid black">
+            <br />
             <input type="number" min="60" max="1800" step="1" placeholder="0000 sec">
             <p>ENTER OPTIMIZATION TIMER</p>
             <p>From 60-1800 seconds</p>
             <p>This value refers to the wait time to optimize after a change in static.</p>
+            <br/>
         </div>
         <div class="middle" style="display: flex">
+            <br />
             <div class="cntr" style="border-right:1px solid black">
                 <p>VFD Max. Freq.</p>
                 <input type="number" placeholder="000 Hz" min="0" step="1">
             </div>
             <div>
-                <p>Static Pressure Limits</p>
-                <div style="display: flex">
-                    <div class="cntr">
+                <br />
+                <p class="cntr">Static Pressure Limits</p>
+                <div class="col-md-12">
+                    <div class="col-md-6 cntr">
                         MIN<br/>
                         <input type="number" placeholder="00.0 in" min="0" step="0.1">
                     </div>
-                    <div class="cntr">
+                    <div class="col-md-6 cntr">
                         MAX<br/>
                         <input type="number" placeholder="00.0 in" min="0" step="0.1">
                     </div>
@@ -31,40 +41,51 @@
             </div>
         </div>
         <div class="bottom">
-            <p>CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
+            <br />
+            <p style="text-align: center">CHANGE REMOTE CONTROL FROM BACNET TO HARDWIRED CONTROL</p>
 
-            <div id="1-ENABLEDISABLE" class="switch">
-                <button class="disHardware greenBtn" onclick="clickHardware()">ENABLE COMMS<br/>DISABLE HARDWARE</button>
-                <button class="disComms blueBtn" onclick="clickHardware()">ENABLE HARDWARE<br/>DISABLE COMMS</button>
+            <div id="1-ENABLEDISABLE" class="switch col-xs-12">
+                <button class="disHardware col-xs-9 greenBtn" onclick="clickHardware()">ENABLE COMMS<br/>DISABLE HARDWARE</button>
+                <button class="disComms col-xs-9 blueBtn" onclick="clickHardware()">ENABLE HARDWARE<br/>DISABLE COMMS</button>
 
-                <div class="hrdwareActive">HARDWARE<br/>ACTIVE</div>
-                <div class="commsActive">COMMS<br/>ACTIVE</div>
+                <div class="hrdwareActive col-xs-3">HARDWARE<br/>ACTIVE</div>
+                <div class="commsActive  col-xs-3">COMMS<br/>ACTIVE</div>
             </div>
         </div>
     </div>
-    <div class="right">
+    <div class="right noPadding col-sm-3">
         <div class="top">
+            <br />
             <p>ENTER DELAY TIMER<br/>From 0-60 mn.</p>
             <input class="timer" type="number" placeholder="00 mn" min="0" max="60" step="1">
+            <br />
             <p>Delay before Optimization will start after unit starts.</p>
+            <br />
         </div>
         <div class="bottom">
+            <br />
             <p>Duct Sensor Size</p>
             <input placeholder="00.0 wc" min="0" step="0.1">
         </div>
     </div>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD<br/>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev">Prev.<br />Page</a>
-    <a class="rightButton showNext" onclick="nextSysPage()">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System<br/>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext" onclick="nextSysPage()">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script>
     document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
-    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
+//    document.getElementsByClassName('arrowR')[0].classList.remove('showNext');
     //------ Navigation ---------
     function openMaint() {
         window.location.href = "maint.html";

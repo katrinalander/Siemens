@@ -1,55 +1,86 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/BACnetSet.css">
 <link rel="stylesheet" href="css/colors.css">
+
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
+
 <div>
+    <br/>
     <p style="text-align: center">WINS Name: <span id="winNum"></span></p>
 
-    <div class="topPart">
-        <div class="left">
-            <button class="DHCP redBtn" onclick="switchDHCP()">ENABLE<br/>DHCP</button>
-            <div class="port">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <button class="col-md-6 redBtn" onclick="switchDHCP()">ENABLE<br/>DHCP</button>
+            <div class="col-md-6">
                 Port:<br/>
                 <input id="port" placeholder="000000" type="number" readonly>
             </div>
         </div>
-        <div class="devPrmt">
-            <div style="display: flex;margin: 1px;"><p style="margin:0;flex: 1">DEV ID:</p><input style="flex: 1" id="devID" type="number" readonly></div>
-            <div style="display: flex;margin: 1px"><p style="margin:0;flex: 1">DEV NAME:</p><input style="flex: 1" id="devName" type="number" readonly></div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <p class="col-md-6" style="text-align:right">DEV ID:</p><input class="col-md-6" id="devID" type="number" readonly>
+            </div>
+            <div class="col-md-12">
+                <p class="col-md-6" style="text-align:right">DEV NAME:</p><input class="col-md-6" id="devName" type="number" readonly>
+            </div>
         </div>
     </div>
+    <br/>
 
-    <div style="margin:0 5%">
-        <p class="actual"><b>Actual Settings</b></p>
-        <div>
-            <div class="line">
-                <p class="quaterLbl">IP Address:</p>
-                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
-                <div class="sets" id="set1"></div>
+    <div class="col-md-12" style="margin-top:5%">
+        <span class="col-md-10"></span><p class="col-md-2 noPadding"><b>Actual Settings</b></p>
+        <div class="col-md-12">
+            <p class="col-md-2">IP Address:</p>
+            <div class="col-md-8">
+                <input class="col-md-3"><input class="col-md-3"><input class="col-md-3"><input class="col-md-3">
             </div>
-            <div class="line">
-                <p class="quaterLbl">Mask:</p>
-                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
-                <div class="sets" id="set2"></div>
+            <div class="col-md-2" id="set1"></div>
+        </div>
+        <div class="col-md-12">
+            <p class="col-md-2">Mask:</p>
+            <div class="col-md-8">
+                <input class="col-md-3"><input class="col-md-3"><input class="col-md-3"><input class="col-md-3">
             </div>
-            <div class="line">
-                <p class="quaterLbl">Gateway:</p>
-                <input class="quater"><input class="quater"><input class="quater"><input class="quater">
-                <div class="sets" id="set3"></div>
+            <div class="col-md-2" id="set2"></div>
+        </div>
+        <div class="col-md-12">
+            <p class="col-md-2">Gateway:</p>
+            <div class="col-md-8">
+                <input class="col-md-3"><input class="col-md-3"><input class="col-md-3"><input class="col-md-3">
             </div>
+            <div class="col-md-2" id="set3"></div>
         </div>
     </div>
-    <p style="text-align: center">Note: Cycle power after making changes.</p>
+    <br />
+    <p class="col-md-12" style="text-align: center">Note: Cycle power after making changes.</p>
 </div>
-<div class="footer">
-    <button onclick="openMain()">Main</button>
-    <button onclick="openVFDstatus()">VFD</br>Status</button>
-    <span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>
-    <a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>
-    <button onclick="openSysSetup()">System</br>Setup</button>
-    <button onclick="openMaint()">Maint.</button>
+
+<!--<div class="footer">-->
+    <!--<button onclick="openMain()">Main</button>-->
+    <!--<button onclick="openVFDstatus()">VFD</br>Status</button>-->
+    <!--<span class="arrowL showPrev"></span><a class="leftButton showPrev" onclick="prevPage()">Prev.<br />Page</a>-->
+    <!--<a class="rightButton showNext">Next<br />Page</a><span class="arrowR showNext"></span>-->
+    <!--<button onclick="openSysSetup()">System</br>Setup</button>-->
+    <!--<button onclick="openMaint()">Maint.</button>-->
+<!--</div>-->
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
 </div>
+
 <script>
     var winNum = '000000000000000';
     //actual settings 3:
@@ -60,7 +91,7 @@
     var switcherDHCP = false;
 
     document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
-    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
+//    document.getElementsByClassName('arrowL')[0].classList.remove('showPrev');
 
     document.getElementById('winNum').innerHTML = winNum;
     document.getElementById('set1').innerHTML = set1;
