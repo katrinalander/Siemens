@@ -3,28 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5601c902-5fc9-4293-b7d7-3c7fd0b60f9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BACnetSet.html" afterPath="$PROJECT_DIR$/BACnetSet.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VFDstatus.html" afterPath="$PROJECT_DIR$/VFDstatus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlSelection.html" afterPath="$PROJECT_DIR$/controlSelection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/BACnetSet.css" afterPath="$PROJECT_DIR$/css/BACnetSet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/VFDstatus.css" afterPath="$PROJECT_DIR$/css/VFDstatus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/colors.css" afterPath="$PROJECT_DIR$/css/colors.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/ctrlSelect.css" afterPath="$PROJECT_DIR$/css/ctrlSelect.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/lonWorks.css" afterPath="$PROJECT_DIR$/css/lonWorks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/maint.css" afterPath="$PROJECT_DIR$/css/maint.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/modBus.css" afterPath="$PROJECT_DIR$/css/modBus.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/switches.css" afterPath="$PROJECT_DIR$/css/switches.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sysSetup.css" afterPath="$PROJECT_DIR$/css/sysSetup.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/maint.js" afterPath="$PROJECT_DIR$/js/maint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lonWorks.html" afterPath="$PROJECT_DIR$/lonWorks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.html" afterPath="$PROJECT_DIR$/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maint.html" afterPath="$PROJECT_DIR$/maint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modBus.html" afterPath="$PROJECT_DIR$/modBus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/switches.html" afterPath="$PROJECT_DIR$/switches.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetup.html" afterPath="$PROJECT_DIR$/sysSetup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetup2.html" afterPath="$PROJECT_DIR$/sysSetup2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetup3.html" afterPath="$PROJECT_DIR$/sysSetup3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetupNext1.html" afterPath="$PROJECT_DIR$/sysSetupNext1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetupNext1_VFD.html" afterPath="$PROJECT_DIR$/sysSetupNext1_VFD.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valuesCFM.html" afterPath="$PROJECT_DIR$/valuesCFM.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/version.html" afterPath="$PROJECT_DIR$/version.html" />
     </list>
@@ -41,11 +24,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="maint.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="version.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/version.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VFDstatus.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maint.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/maint.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="104" column="21" lean-forward="false" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+            <state relative-caret-position="206">
+              <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
               <folding>
                 <element signature="n#div#1;n#div#1;n#!!top" expanded="false" />
               </folding>
@@ -53,33 +59,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sysSetupNext1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sysSetupNext1.html">
+      <file leaf-file-name="maint.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/maint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="82" selection-end-column="6" />
+            <state relative-caret-position="-783">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#2667#3244#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="valuesCFM.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valuesCFM.html">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="80" />
+            <state relative-caret-position="-2722">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lonWorks.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/lonWorks.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+            <state relative-caret-position="254">
+              <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sysSetup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sysSetup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DASH.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/DASH.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2865">
+              <caret line="516" column="64" lean-forward="false" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
+              <folding>
+                <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
+                <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
+                <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
+                <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
+                <element signature="n#!!block;n#loadDash#0" expanded="false" />
+                <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
+                <element signature="e#15135#15893#0" expanded="false" />
+                <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
+                <element signature="e#25724#25772#0" expanded="false" />
+                <element signature="n#!!block;n#changeImg#0" expanded="false" />
+                <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
+                <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
+                <element signature="n#!!block;n#writeIncrementiOS#0" expanded="false" />
+                <element signature="n#!!block;n#writeIncrementAndroid#0" expanded="false" />
+                <element signature="n#!!block;n#getPlatform#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sysSetup.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/sysSetup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,38 +153,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BACnetSet.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/BACnetSet.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="70" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modBus.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/modBus.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="85" column="14" lean-forward="false" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modBus.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modBus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -146,7 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.sta</find>
       <find>displ</find>
       <find>left</find>
       <find>.button</find>
@@ -165,17 +184,18 @@
       <find>showNext</find>
       <find>.total</find>
       <find>bla</find>
-      <find>switch</find>
       <find>cnt</find>
       <find>maintBtns</find>
       <find>user</find>
-      <find>flex</find>
       <find>userIn</find>
       <find>userInput</find>
       <find>modal-footer</find>
       <find>fle</find>
       <find>font</find>
       <find>sele</find>
+      <find>flex</find>
+      <find>openSysSetup</find>
+      <find>switch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,13 +214,10 @@
         <option value="$PROJECT_DIR$/js/DASH.js" />
         <option value="$PROJECT_DIR$/css/main-sdk.min.css" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/js/VFD_CFM.js" />
         <option value="$PROJECT_DIR$/js/nextVFD_CFM.js" />
         <option value="$PROJECT_DIR$/nextVFD_CFM.html" />
-        <option value="$PROJECT_DIR$/VFDstatus.html" />
         <option value="$PROJECT_DIR$/css/VFDstatus.css" />
         <option value="$PROJECT_DIR$/sysSetup2.html" />
         <option value="$PROJECT_DIR$/sysSetup.html" />
@@ -208,22 +225,25 @@
         <option value="$PROJECT_DIR$/js/maint.js" />
         <option value="$PROJECT_DIR$/css/colors.css" />
         <option value="$PROJECT_DIR$/css/maint.css" />
-        <option value="$PROJECT_DIR$/css/sysSetup.css" />
         <option value="$PROJECT_DIR$/sysSetupNext1.html" />
         <option value="$PROJECT_DIR$/switches.html" />
         <option value="$PROJECT_DIR$/css/switches.css" />
         <option value="$PROJECT_DIR$/controlSelection.html" />
         <option value="$PROJECT_DIR$/css/ctrlSelect.css" />
-        <option value="$PROJECT_DIR$/version.html" />
         <option value="$PROJECT_DIR$/sysSetupNext1_VFD.html" />
-        <option value="$PROJECT_DIR$/valuesCFM.html" />
         <option value="$PROJECT_DIR$/BACnetSet.html" />
         <option value="$PROJECT_DIR$/css/BACnetSet.css" />
         <option value="$PROJECT_DIR$/lonWorks.html" />
         <option value="$PROJECT_DIR$/css/lonWorks.css" />
-        <option value="$PROJECT_DIR$/maint.html" />
         <option value="$PROJECT_DIR$/css/modBus.css" />
         <option value="$PROJECT_DIR$/modBus.html" />
+        <option value="$PROJECT_DIR$/valuesCFM.html" />
+        <option value="$PROJECT_DIR$/css/sysSetup.css" />
+        <option value="$PROJECT_DIR$/version.html" />
+        <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/VFDstatus.html" />
+        <option value="$PROJECT_DIR$/maint.html" />
       </list>
     </option>
   </component>
@@ -234,7 +254,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="141" />
+    <option name="x" value="37" />
     <option name="y" value="23" />
     <option name="width" value="1246" />
     <option name="height" value="800" />
@@ -277,7 +297,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,10 +430,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180214000" />
+    <option name="totallyTimeSpent" value="181442000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="141" y="23" width="1246" height="800" extended-state="0" />
+    <frame x="37" y="23" width="1246" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -422,7 +442,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13135593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15960452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -540,37 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/DASH.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="516" column="64" lean-forward="false" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
-          <folding>
-            <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
-            <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
-            <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
-            <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
-            <element signature="n#!!block;n#loadDash#0" expanded="false" />
-            <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
-            <element signature="e#15135#15893#0" expanded="false" />
-            <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
-            <element signature="e#25724#25772#0" expanded="false" />
-            <element signature="n#!!block;n#changeImg#0" expanded="false" />
-            <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
-            <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
-            <element signature="n#!!block;n#writeIncrementiOS#0" expanded="false" />
-            <element signature="n#!!block;n#writeIncrementAndroid#0" expanded="false" />
-            <element signature="n#!!block;n#getPlatform#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main-sdk.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -592,13 +581,6 @@
         <state relative-caret-position="293">
           <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="51" lean-forward="true" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -626,14 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysSetup3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -642,14 +616,6 @@
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,16 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sysSetup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="59" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/switches.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -702,14 +658,6 @@
             <element signature="n#style#0;n#div#3;n#div#1;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#4;n#div#1;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="120" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,14 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysSetupNext1_VFD.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -763,38 +703,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valuesCFM.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysSetupNext1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="82" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/sysSetup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/maint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-763">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#2667#3244#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,13 +736,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maint.html">
+    <entry file="file://$PROJECT_DIR$/css/modBus.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="104" column="21" lean-forward="false" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+        <state relative-caret-position="239">
+          <caret line="85" column="14" lean-forward="false" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modBus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="n#div#1;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/VFDstatus.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1616">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valuesCFM.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="57" lean-forward="false" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/sysSetup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/BACnetSet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="70" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -846,28 +811,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/BACnetSet.css">
+    <entry file="file://$PROJECT_DIR$/js/DASH.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="70" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/modBus.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="85" column="14" lean-forward="false" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modBus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="2865">
+          <caret line="516" column="64" lean-forward="false" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
           <folding>
-            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
+            <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
+            <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
+            <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
+            <element signature="n#!!block;n#loadDash#0" expanded="false" />
+            <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
+            <element signature="e#15135#15893#0" expanded="false" />
+            <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
+            <element signature="e#25724#25772#0" expanded="false" />
+            <element signature="n#!!block;n#changeImg#0" expanded="false" />
+            <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
+            <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
+            <element signature="n#!!block;n#writeIncrementiOS#0" expanded="false" />
+            <element signature="n#!!block;n#writeIncrementAndroid#0" expanded="false" />
+            <element signature="n#!!block;n#getPlatform#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2722">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sysSetup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/maint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-783">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="e#2667#3244#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#1;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
