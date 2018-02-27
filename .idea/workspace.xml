@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5601c902-5fc9-4293-b7d7-3c7fd0b60f9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BACnetMSTP.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setupPrmtr1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BACnetSet.html" afterPath="$PROJECT_DIR$/BACnetSet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/maint.css" afterPath="$PROJECT_DIR$/css/maint.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maint.html" afterPath="$PROJECT_DIR$/maint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetupNext1.html" afterPath="$PROJECT_DIR$/sysSetupNext1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/VFD_CFM.js" afterPath="$PROJECT_DIR$/js/VFD_CFM.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,11 +31,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setupPrmtr1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VFDstatus.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VFD_CFM.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/VFD_CFM.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="119" lean-forward="false" selection-start-line="2" selection-start-column="119" selection-end-line="2" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setupPrmtr1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setupPrmtr1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+            <state relative-caret-position="299">
+              <caret line="165" column="10" lean-forward="true" selection-start-line="165" selection-start-column="10" selection-end-line="165" selection-end-column="10" />
               <folding>
                 <element signature="n#div#1;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -136,16 +151,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sysSetup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sysSetup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BACnetSet.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BACnetSet.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -224,7 +229,6 @@
         <option value="$PROJECT_DIR$/css/main-sdk.min.css" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/VFD_CFM.js" />
         <option value="$PROJECT_DIR$/js/nextVFD_CFM.js" />
         <option value="$PROJECT_DIR$/nextVFD_CFM.html" />
         <option value="$PROJECT_DIR$/css/VFDstatus.css" />
@@ -255,6 +259,7 @@
         <option value="$PROJECT_DIR$/maint.html" />
         <option value="$PROJECT_DIR$/sysSetupNext1.html" />
         <option value="$PROJECT_DIR$/setupPrmtr1.html" />
+        <option value="$PROJECT_DIR$/js/VFD_CFM.js" />
       </list>
     </option>
   </component>
@@ -455,11 +460,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193985000" />
+    <option name="totallyTimeSpent" value="194523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1246" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -467,7 +471,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15960452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36299434" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -611,14 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="67" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/VFD_CFM.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -814,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysSetup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -935,8 +923,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setupPrmtr1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="161" column="35" lean-forward="false" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+        <state relative-caret-position="299">
+          <caret line="165" column="10" lean-forward="true" selection-start-line="165" selection-start-column="10" selection-end-line="165" selection-end-column="10" />
           <folding>
             <element signature="n#div#1;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -964,6 +952,22 @@
             <element signature="e#11687#12139#0" expanded="false" />
             <element signature="e#12167#12325#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VFDstatus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/VFD_CFM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="119" lean-forward="false" selection-start-line="2" selection-start-column="119" selection-end-line="2" selection-end-column="119" />
+          <folding />
         </state>
       </provider>
     </entry>

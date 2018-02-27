@@ -1,6 +1,6 @@
 var VFD, newVFD, numPages, index;
 if(!sessionStorage.getItem("VFD")) {
-    VFD = ["DI", "DI", "EN", "EN", "CO", "DI", "DI", "RE", "CO", "CO"];
+    VFD = ["DI", "DI", "EN", "EN", "CO", "DI", "DI", "RE", "DI", "DI", "EN", "EN", "CO", "DI", "DI", "RE", "CO", "CO", "CO", "CO"];
     newVFD = [];
     if (VFD.length >6) {
         document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
