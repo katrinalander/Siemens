@@ -11,13 +11,15 @@
 
 <div class="display">
     <div class="col-md-2"></div>
-    <div class="prmtr col-md-8">
+    <div class="col-md-2" style="margin: 3% 0">
+        <button class="whiteBtn setup" onclick="openSetupPrmtr()">SETUP<br/>PARAMETERS</button>
+    </div>
+    <div class="prmtr col-md-6">
+
         <div class="lbl col-md-3">PARAMETER FEATURES:</div>
         <div class="btns col-md-9">
-            <!--<div class="col-md-">-->
                 <button class="save col-md-6 drkBlueBtn">SAVE</button>
                 <button class="load col-md-6 greenBtn">LOAD</button>
-            <!--</div>-->
             <button class="cycle col-md-12 greyBtn">CYCLE POWER</button>
         </div>
     </div>
@@ -28,6 +30,7 @@
 
         <!--<button id="slct" class="maintBtn whiteBtn redFont">Select a Communication<br/>option on right</button>-->
         <button id="bac" class="maintBtn col-md-6 whiteBtn" onclick="openBacnet()">BACnet<br/>Setup</button>
+        <button id="bacM" class="maintBtn col-md-6 whiteBtn" onclick="openBacnetM()">BACnet<br/>Setup</button>
         <button id="lonWorks" class="maintBtn col-md-6 whiteBtn" onclick="openLonWorks()">LonWorks<br/>Setup</button>
         <button id="modBus" class="maintBtn col-md-6 whiteBtn" onclick="openModBus()">ModBus<br/>Setup</button>
 
@@ -102,11 +105,20 @@
 <script>
 
     var BACnet = false;
+    var BACnetM = true;
     var LonWorks = false;
-    var ModBus = true;
+    var ModBus = false;
 
     if(BACnet) {
         document.getElementById('bac').style.display = 'block';
+        document.getElementById('bacM').style.display = 'none';
+        document.getElementById('lonWorks').style.display = 'none';
+        document.getElementById('modBus').style.display = 'none';
+        document.getElementById('slct').style.display = 'none';
+    }
+    if(BACnetM) {
+        document.getElementById('bacM').style.display = 'block';
+        document.getElementById('bac').style.display = 'none';
         document.getElementById('lonWorks').style.display = 'none';
         document.getElementById('modBus').style.display = 'none';
         document.getElementById('slct').style.display = 'none';
@@ -114,6 +126,7 @@
     if(LonWorks) {
         document.getElementById('lonWorks').style.display = 'block';
         document.getElementById('bac').style.display = 'none';
+        document.getElementById('bacM').style.display = 'none';
         document.getElementById('modBus').style.display = 'none';
         document.getElementById('slct').style.display = 'none';
     }
@@ -121,6 +134,7 @@
         document.getElementById('modBus').style.display = 'block';
         document.getElementById('lonWorks').style.display = 'none';
         document.getElementById('bac').style.display = 'none';
+        document.getElementById('bacM').style.display = 'none';
         document.getElementById('slct').style.display = 'none';
     }
     /* ----- Navigation ----- */
@@ -147,10 +161,16 @@
     function openBacnet() {
         window.location.href = "BACnetSet.html";
     }
+    function openBacnetM() {
+        window.location.href = "BACnetMSTP.html";
+    }
     function openLonWorks() {
         window.location.href = "lonWorks.html";
     }
     function openModBus() {
         window.location.href = "modBus.html";
+    }
+    function openSetupPrmtr() {
+        window.location.href = "setupPrmtr1.html";
     }
 </script>

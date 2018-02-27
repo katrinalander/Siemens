@@ -1,0 +1,110 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/BACnetSet.css">
+<link rel="stylesheet" href="css/colors.css">
+<style>
+    p {
+        font-size: 1.5em;
+    }
+    .line {
+        margin:3% 2% 2% 2%;
+        padding:1%;
+        border:1px solid dimgrey;
+    }
+    .left {
+        background-color:grey;
+        border: 1px solid dimgrey;
+        color:white;
+        height:100%;
+        float:right;
+    }
+</style>
+
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div>
+    <div class="col-md-8">
+        <div class="col-md-12 line">
+            <p class="col-md-6">ENTER BACNET DEVICE NAME</p>
+            <input class="col-md-6" id="dName">
+        </div>
+        <div class="col-md-12 line">
+            <p class="col-md-6">ENTER BACNET BAUDRATE</p>
+            <input class="col-md-6" id="baudrate">
+        </div>
+        <div class="col-md-12 line">
+            <p class="col-md-6">ENTER BACNET DEVICE ID</p>
+            <input class="col-md-6" id="idDevice">
+        </div>
+        <div class="col-md-12 line">
+            <p class="col-md-6">ENTER BACNET SLAVE ADDRESS</p>
+            <input class="col-md-6" id="addr">
+        </div>
+    </div>
+    <div class="col-md-3 noPadding left">
+        <p style="background-color:black;width:100%;padding:5%;">BAUDRATE</p>
+        <p style="padding-left: 5%">0 = 9600</p>
+        <p style="padding-left: 5%">1 = 19200</p>
+        <p style="padding-left: 5%">2 = 38400</p>
+        <p style="padding-left: 5%">3 = 57600</p>
+        <p style="padding-left: 5%">4 = 76800</p>
+        <p style="padding-left: 5%">5 = 115200</p>
+    </div>
+</div>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev"  onclick="prevPage()">Prev.<br />Page</button>
+    <!--<div class="arrowL noPadding col-sm-2"></div><div class="leftBtn col-sm-2">Prev.<br />Page</div>-->
+    <!--</button>-->
+    <button class="col-lg-2 rightButton showNext">Next<br />Page</button>
+    <!--<div class="rightBtn col-sm-2">Next<br />Page</div><div class="arrowR noPadding col-sm-2"></div>-->
+    <!--</button>-->
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
+</div>
+
+<script>
+    var dName = '000000000000000';
+    //actual settings 3:
+    var baudrate = '000000000000000';
+    var idDevice = '000000000000000';
+    var addr = '000000000000000';
+
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+
+    document.getElementById('dName').value = dName;
+    document.getElementById('baudrate').value = baudrate;
+    document.getElementById('idDevice').value = idDevice;
+    document.getElementById('addr').value = addr;
+
+    // ------ NAVIGATION -----
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+    }
+    function prevPage() {
+        window.location.href = "maint.html";
+    }
+</script>

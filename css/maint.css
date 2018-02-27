@@ -72,12 +72,16 @@ iframe[seamless] {
 .display {
     height: 70%;
 }
+.display .setup {
+    height: 23.5%;
+    width:100%;
+}
 .display .prmtr {
     border: 1px solid #6c6c6c;
     border-radius: 5px;
     text-align: center;
     margin: 3% 0;
-    padding: 5px;
+    padding: 0.5%;
     box-sizing: border-box;
 }
 .display .prmtr .lbl {

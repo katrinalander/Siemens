@@ -1,0 +1,381 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/maint.css">
+<link rel="stylesheet" href="css/colors.css">
+<style>
+    .top {
+        height:55%;
+        width: 100%;
+    }
+    .bottom {
+        padding-top: 3%;
+        text-align: center;
+        height: 15%;
+        width: 100%;
+    }
+    .bottom button.greyBtn {
+        height: 70%;
+        width: 20%;
+    }
+    .column {
+        padding: 1%;
+        margin: 1%;
+        border:1px solid black;
+        text-align: center;
+        box-sizing: border-box;
+        max-width: 30%;
+        height: 100%;
+    }
+    input {
+        font-family: Verdana;
+        padding: 0.3em;
+        font-size: 1em;
+        border: 2px solid gray;
+        height: 10%;
+    }
+    .modal-body {
+        height: 70%;
+    }
+    .disclamer {
+        border: 1px solid black;padding: 1%;margin: 1%;
+    }
+    .enterVal {
+        border: 1px solid black;background-color:#c4dafbfa;height:100%;text-align: center;padding-top: 10%
+    }
+    .screenBtn {
+        width:20%;
+        height: 20%;
+    }
+    button.col-md-6 {
+        height: 20%;
+        margin: 0.5%;
+        max-width: 49%;
+    }
+</style>
+
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div class="top col-md-12">
+    <div class="col-md-4 column">
+        <p>Nominal Mtr RPM</p>
+        <input id="RPM" />
+        <p>Nominal Mtr HP</p>
+        <input id="HP" />
+        <p>Design Mtr Qty</p>
+        <input id="mtrQty" />
+        <p>Design RPM</p>
+        <input id="desRPM" />
+    </div>
+    <div class="col-md-4 column">
+        <p>Wheel Width</p>
+        <input id="width" />
+        <p>Wheel Size</p>
+        <input id="size" />
+        <p>Nominal VFD HP</p>
+        <input id="vfdHp" />
+        <p>Nominal Voltage</p>
+        <input id="voltage" />
+    </div>
+    <div class="col-md-4 column">
+        <p>Elevation</p>
+        <input id="elevation" />
+        <p>Fan DP Size</p>
+        <input id="DPsize" />
+        <p>Design CFM</p>
+        <input id="designCFM" />
+        <div style="padding-top:5%;">
+            <p class="col-md-6" style="text-align: right">Row </p><input style="text-align:left;width:20%" class="blueDisplay col-md-6"/>
+        </div>
+        <div style="padding-top:16%;">
+            <p class="col-md-6" style="text-align: right">Column</p><input style="text-align:left;width:20%" class="blueDisplay col-md-6 noPadding"/>
+        </div>
+    </div>
+</div>
+<div class="col-md-12 bottom">
+    <button class="greyBtn" id="btnCFM">CFM CONFIG</button>
+    <button class="greyBtn" id="btnLogo">LOGO</button>
+    <button class="greyBtn" id="btnTest">TEST</button>
+    <button class="questionBtn" id="question"></button>
+</div>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev">Prev.<br />Page</button>
+
+    <button class="col-lg-2 rightButton showNext" onclick="nextPage()">Next<br />Page</button>
+
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
+</div>
+
+<!-- The Modal of Question button -->
+<div id="modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+        </div>
+        <div class="modal-body" style="height: 85%;overflow: auto;">
+            <div class="disclamer">
+                <p style="color:red">DISCLAIMER:</p>
+                <p>The input/otput values listed on the previous screen are for the setup of the Hutair control system
+                    It is very important that the values are not changed or adjusted unless directed to do so by an NAS Employee.
+                </p>
+            </div>
+                <div class="col-md-6" style="color: green;text-align: right;">
+                    <p>Nominal Mtr RPM - </p>
+                    <p>Nominal Mtr HP - </p>
+                    <p>Design Mtr Qty - </p>
+                    <p>Design RPM - </p>
+                    <p>Wheel Width - </p>
+                    <p>Wheel Size - </p>
+
+                    <p>Nominal VFD HP - </p>
+                    <p>Nominal Voltage - </p>
+                    <p>Elevation - </p>
+                    <p>Fan DP Size - </p>
+                    <p>Design CFM - </p>
+                    <p>Fan Grid - </p>
+                </div>
+                <div class="col-md-6">
+                    <p>Enter either 1800 or 3600</p>
+                    <p>Enter HP rating of motor (i.e.7.5)</p>
+                    <p>Enter # of motors in the fan array</p>
+                    <p>Enter the Fan Wheel RPM</p>
+                    <p>Enter the Fan Wheel width</p>
+                    <p>Enter the Fan Wheel diameter</p>
+
+                    <p>Enter VFD rated HP</p>
+                    <p>Enter the voltage of system</p>
+                    <p>Enter the job site elevation (affects cone constant)</p>
+                    <p>Enter size of the flow transducer</p>
+                    <p>Enter maximum CFM value</p>
+                    <p>Enter the array setup of Fanwall</p>
+                    <p>(Row: Horizontal; Column: Vertical</p>
+                </div>
+                <p class="col-md-11" style="color: red">
+                    *After changes have been made, remember to save changed parameters to the SD cadr provided with each controller
+                </p>
+        </div>
+    </div>
+
+</div>
+<!-- The Modal of CFM config button -->
+<div id="modalCFM" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>CFM CONFIG: Setup for how the transducers are hooked up in the panel</p>
+        </div>
+        <div class="modal-body">
+            <div class="col-md-4 enterVal">
+                <p>ENTER VALUE HERE:</p>
+                <input>
+            </div>
+            <div class="col-md-8" style="border: 1px solid black;height:100%">
+                <p>ENTER Setup:</p>
+                <p>0   Yaskawa VFD Input</p>
+                <p>0   Danfos VFD Input</p>
+                <p>1   ABB VFD Input</p>
+                <p>2   Current VFD Input</p>
+                <p>3   Voltage VFD Input</p>
+                <p>4   Smart Cube 10" Input</p>
+                <p>5   Smart Cube 25" Input</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- The Modal for LOGO button -->
+<div id="modalLogo" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>Select LOGO for startup screen</p>
+        </div>
+        <div class="modal-body" style="height:50%;text-align:center;">
+                <button class="whiteBtn screenBtn" id="screen0" onclick="selectScreen(0)">screen 1</button>
+                <button class="whiteBtn screenBtn" id="screen1" onclick="selectScreen(1)">screen 2</button>
+                <button class="whiteBtn screenBtn" id="screen2" onclick="selectScreen(2)">screen 3</button>
+        </div>
+        <div class="modal-footer">
+            <button class="greyBtn" onclick="viewStartupScreen()">VIEW STARTUP SCREEN</button>
+        </div>
+    </div>
+
+</div>
+<!-- The Modal for TEST button -->
+<div id="modalTest" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <p>Analog Output</p>
+        </div>
+        <div class="modal-body">
+            <div class="col-md-6" style="padding: 2%">
+                <button class="col-md-6 whiteBtn" id="force0" onclick="force(0)">Force<br/>4mA or 0V</button>
+                <button class="col-md-6 whiteBtn" onclick="unforce(0)">Unforce<br/>4mA or 0V</button>
+                <button class="col-md-6 whiteBtn" id="force1" onclick="force(1)">Force<br/>12mA or 5V</button>
+                <button class="col-md-6 whiteBtn" onclick="unforce(1)">Unforce<br/>12mA or 5V</button>
+                <button class="col-md-6 whiteBtn"id="force2" onclick="force(2)">Force<br/>20mA or 10V</button>
+                <button class="col-md-6 whiteBtn" onclick="unforce(2)">Unforce<br/>20mA or 10V</button>
+            </div>
+            <div class="col-md-6" style="padding: 2%">
+                <p style="color: green;font-size:1.5em">See electrical schematics for selection Voltage or Milliamps</p>
+                <button class="greyBtn" id="slcted" style="height: 15%; width: 50%;" onclick="slcted()">Voltage Selected</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+
+    /*------ Modal -----*/
+    // Get the modal
+    var modal = document.getElementById('modal');
+    var modalCFM = document.getElementById('modalCFM');
+    var modalLogo = document.getElementById('modalLogo');
+    var modalTest = document.getElementById('modalTest');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("question");
+    var btnCFM = document.getElementById("btnCFM");
+    var btnLogo = document.getElementById("btnLogo");
+    var btnTest = document.getElementById("btnTest");
+
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close")[1];
+    var span3 = document.getElementsByClassName("close")[2];
+    var span4 = document.getElementsByClassName("close")[3];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    };
+    btnCFM.onclick = function() {
+        modalCFM.style.display = "block";
+    };
+    btnLogo.onclick = function() {
+        modalLogo.style.display = "block";
+    };
+    btnTest.onclick = function() {
+        modalTest.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+        modal.style.display = "none";
+    };
+    span2.onclick = function() {
+        modalCFM.style.display = "none";
+    };
+    span3.onclick = function() {
+        modalLogo.style.display = "none";
+    };
+    span4.onclick = function() {
+        modalTest.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        if (event.target == modalCFM) {
+            modalCFM.style.display = "none";
+        }
+        if (event.target == modalLogo) {
+            modalLogo.style.display = "none";
+        }
+        if (event.target == modalTest) {
+            modalTest.style.display = "none";
+        }
+    };
+    /*------------------------*/
+
+    function selectScreen(num) {
+        for(var i=0; i<3; i++){
+            if(i === num){
+                document.getElementById("screen"+i).classList.add('greenBtn');
+                document.getElementById("screen"+i).classList.remove('whiteBtn');
+            }
+            else {
+                document.getElementById("screen"+i).classList.remove('greenBtn');
+                document.getElementById("screen"+i).classList.add('whiteBtn');
+            }
+        }
+    };
+
+    function force(num) {
+        for(var i=0; i<3; i++) {
+            if (num === i) {
+                document.getElementById("force" + i).classList.add('greenBtn');
+                document.getElementById("force" + i).classList.remove('whiteBtn');
+            }
+            else {
+                document.getElementById("force" + i).classList.remove('greenBtn');
+                document.getElementById("force" + i).classList.add('whiteBtn');
+            }
+        }
+    }
+
+    function unforce(num) {
+        document.getElementById("force" + num).classList.remove('greenBtn');
+        document.getElementById("force" + num).classList.add('whiteBtn');
+    }
+
+    function viewStartupScreen() {
+        console.log("relocate to startup window...");
+//        window.location.href = "";
+    }
+
+    function slcted() {
+        if(document.getElementById('slcted').innerHTML === 'Voltage Selected') {
+            document.getElementById('slcted').innerHTML = 'Milliamps Selected';
+        }
+        else {
+            document.getElementById('slcted').innerHTML = 'Voltage Selected';
+        }
+    }
+
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+    }
+    function nextPage() {
+
+    }
+</script>
