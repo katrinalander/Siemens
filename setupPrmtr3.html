@@ -1,0 +1,94 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/maint.css">
+<link rel="stylesheet" href="css/colors.css">
+<style>
+    input {
+        font-family: Verdana;
+        padding: 0.3em;
+        font-size: 1em;
+        border: 2px solid gray;
+    }
+    p, span {
+        font-size: 1.5em;
+    }
+    button {
+        height: 5%;
+        width: 50%;
+    }
+</style>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div class="col-md-11 noPadding" style="border: 1px solid black;margin: 2%">
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>FAN ADD PERCENTAGE LIMIT</p>
+        <span class="col-md-9">
+            Adjust the percentage of Max Hz that the system will turn on an additional fan to meet airflow
+        </span>
+        <input class="col-md-3"/>
+    </div>
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>OPTIMIZATION MAX % LIMIT</p>
+        <span class="col-md-9">
+            Adjust the percentage of Max Hz that the system will allow Optimization to occur
+        </span>
+        <input class="col-md-3"/>
+    </div>
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>ALLOW OPTIMIZATION SEQUENCE</p>
+        <span class="col-md-9">
+            On = Optimization is available to run <br/>
+            Off = Optimizatin is not available, and does not show up on main screens
+        </span>
+        <div class="col-md-3">
+            <button class="greyBtn" onclick="">ON</button>
+            <button class="greyBtn">OFF</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev" onclick="prevPage()">Prev.<br />Page</button>
+
+    <button class="col-lg-2 rightButton showNext">Next<br />Page</button>
+
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
+</div>
+
+
+<script>
+//    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+    }
+    function prevPage() {
+        window.location.href = "setupPrmtr2.html";
+    }
+</script>

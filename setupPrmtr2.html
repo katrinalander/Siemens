@@ -1,0 +1,96 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/maint.css">
+<link rel="stylesheet" href="css/colors.css">
+<style>
+    input {
+        font-family: Verdana;
+        padding: 0.3em;
+        font-size: 1em;
+        border: 2px solid gray;
+    }
+    p, span {
+        font-size: 1.5em;
+    }
+</style>
+<div class="header">
+    <h2>FANWALL TECHNOLOGY</h2>
+</div>
+
+<div class="col-md-11 noPadding" style="border: 1px solid black;margin: 2%">
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>ENTER FAN ON TIMER FROM 30-300 SECONDS</p>
+        <span class="col-md-9">
+            This value refers to the wait time before the system will turn fans back on
+        </span>
+        <input class="col-md-3"/>
+    </div>
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>ENTER FAN OFF TIMER FROM 30-300 SECONDS</p>
+        <span class="col-md-9">
+            This value refers to the wait time before the system will turn fans off
+        </span>
+        <input class="col-md-3"/>
+    </div>
+    <div class="col-md-12" style="border-bottom:1px solid black;padding:1%">
+        <p>ENTER OPTIMIZATION FAN OFF TIMER FROM 15-300 SECONDS</p>
+        <span class="col-md-9">
+            This value refers to the wait time before the system will turn fans off once the optimimum number of fans has been determined
+        </span>
+        <input class="col-md-3"/>
+    </div>
+    <div class="col-md-12" style="padding:1%">
+        <p>ENGLISH / METRIC UNITS</p>
+        <span class="col-md-9">
+            Select which unit system is desired. Metric - 0, English - 1
+        </span>
+        <input class="col-md-3"/>
+    </div>
+</div>
+
+<div class="footer row col-lg-12">
+    <button class="col-lg-2" onclick="openMain()">Main</button>
+    <button class="col-lg-2" onclick="openVFDstatus()">VFD</br>Status</button>
+    <button class="col-lg-2 leftButton showPrev" onclick="prevPage()">Prev.<br />Page</button>
+
+    <button class="col-lg-2 rightButton showNext" onclick="nextPage()">Next<br />Page</button>
+
+    <button class="col-lg-2" onclick="openSysSetup()">System</br>Setup</button>
+    <button class="col-lg-2" onclick="openMaint()">Maint.</button>
+</div>
+
+
+<script>
+    document.getElementsByClassName('rightButton')[0].classList.remove('showNext');
+    document.getElementsByClassName('leftButton')[0].classList.remove('showPrev');
+
+    /* ----- Navigation ----- */
+    function openMaint() {
+        window.location.href = "maint.html";
+    }
+    function openMain() {
+        window.location.href = "main.html";
+    }
+    function openVFDstatus() {
+        window.location.href = "VFDstatus.html";
+    }
+    function openSysSetup() {
+        if(sessionStorage.getItem("CTRL") === "CFM"){
+            window.location.href = "sysSetup.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "TSP" || sessionStorage.getItem("CTRL") === "DUCT") {
+            window.location.href = "sysSetup2.html";
+        }
+        else if(sessionStorage.getItem("CTRL") === "VFD") {
+            window.location.href = "sysSetup3.html";
+        }
+    }
+    function prevPage() {
+        window.location.href = "setupPrmtr1.html";
+    }
+    function nextPage() {
+        window.location.href = "setupPrmtr3.html";
+    }
+</script>
