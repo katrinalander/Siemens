@@ -53,6 +53,34 @@
         margin: 0.5%;
         max-width: 49%;
     }
+    button.huntair {
+        background-image: url(img/huntair.jpg);
+        background-position: center;
+        background-size: 300px;
+        height: 250px;
+        width: 300px;
+        background-repeat: no-repeat;
+        margin: 1%;
+    }
+    button.ventrol {
+        background-image: url(img/Ventrol.jpg);
+        background-position: center;
+        background-size: 300px;
+        height: 250px;
+        width: 300px;
+        background-repeat: no-repeat;
+    }
+    button.temtrol {
+        background-image: url(img/temtrol.png);
+        background-position: center;
+        background-size: 300px;
+        height: 60px;
+        width: 300px;
+        background-repeat: no-repeat;
+    }
+    button.select {
+        border: 3px solid greenyellow;
+    }
 </style>
 
 <div class="header">
@@ -203,13 +231,15 @@
             <span class="close">&times;</span>
             <p>Select LOGO for startup screen</p>
         </div>
-        <div class="modal-body" style="height:50%;text-align:center;">
-                <button class="whiteBtn screenBtn" id="screen0" onclick="selectScreen(0)">screen 1</button>
-                <button class="whiteBtn screenBtn" id="screen1" onclick="selectScreen(1)">screen 2</button>
-                <button class="whiteBtn screenBtn" id="screen2" onclick="selectScreen(2)">screen 3</button>
+        <div class="modal-body" style="text-align:center;">
+            <button class="whiteBtn screenBtn huntair" id="screen0" onclick="selectScreen(0)"></button>
+            <button class="whiteBtn screenBtn ventrol" id="screen2" onclick="selectScreen(2)"></button>
+            <br/>
+            <button class="whiteBtn screenBtn temtrol" id="screen1" onclick="selectScreen(1)"></button>
+
         </div>
         <div class="modal-footer">
-            <button class="greyBtn" onclick="viewStartupScreen()">VIEW STARTUP SCREEN</button>
+            <button class="greyBtn" onclick="setupStartupScreen()">SETUP STARTUP SCREEN</button>
         </div>
     </div>
 
@@ -312,12 +342,15 @@
     function selectScreen(num) {
         for(var i=0; i<3; i++){
             if(i === num){
-                document.getElementById("screen"+i).classList.add('greenBtn');
-                document.getElementById("screen"+i).classList.remove('whiteBtn');
+                sessionStorage.setItem("startupScreen",i);
+                document.getElementById("screen"+i).style.width = "320px";
+                document.getElementById("screen"+i).style.height = (i!==1) ? "270px" : "80px";
+                document.getElementById("screen"+i).classList.add('select');
             }
             else {
-                document.getElementById("screen"+i).classList.remove('greenBtn');
-                document.getElementById("screen"+i).classList.add('whiteBtn');
+                document.getElementById("screen"+i).style.width = "300px";
+                document.getElementById("screen"+i).style.height = (i!==1) ? "250px" : "60px";
+                document.getElementById("screen"+i).classList.remove('select');
             }
         }
     };
@@ -340,8 +373,20 @@
         document.getElementById("force" + num).classList.add('whiteBtn');
     }
 
-    function viewStartupScreen() {
+    function setupStartupScreen() {
         console.log("relocate to startup window...");
+        if(sessionStorage.getItem('startupScreen') === "0") {
+            console.log("relocate to startup window...", '1-HUNTAIRSTART');
+            window.location.href = "huntair.html";
+        }
+        else if(sessionStorage.getItem('startupScreen') === "1") {
+            console.log("relocate to startup window...", '1-TEMTROLSTART');
+            window.location.href = "temtrol.html";
+        }
+        else if(sessionStorage.getItem('startupScreen') === "2") {
+            console.log("relocate to startup window...",'1-VENTROLSTART');
+            window.location.href = "ventrol.html";
+        }
 //        window.location.href = "";
     }
 

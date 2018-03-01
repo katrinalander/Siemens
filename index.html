@@ -23,10 +23,19 @@
         <script src="js/VFD_CFM.js"></script>
     </head>
     <body>
-    <!--<body onload="loadClimatixValues();">-->
-        <!--<script src="js/vendor/modernizr-3.5.0.min.js"></script>-->
-        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>-->
-
         <iframe id="main" class="row" src="main.html" seamless></iframe>
     </body>
+
+    <script>
+        var iframe = document.getElementById('main');
+        if(sessionStorage.getItem('startupScreen') === "0") {
+            iframe.src = "huntair.html";
+        }
+        else if(sessionStorage.getItem('startupScreen') === "1") {
+            iframe.src = "temtrol.html";
+        }
+        else if(sessionStorage.getItem('startupScreen') === "2") {
+            iframe.src = "ventrol.html";
+        }
+    </script>
 </html>
