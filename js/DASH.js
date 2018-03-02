@@ -498,7 +498,8 @@ function loadClimatixValues() {
 
             //var rjid = ["1-SUPPLYTMP", "1-OUTTMP"];// getNextJsonIds(jsonIdIndex, requestNum, jsonIds);
             var host = configuration.uselocal ? location.hostname : configuration.host;
-            var hostUrl = "http://" + configuration.username + ":" + configuration.password + "@" + host;
+            var hostUrl = "http://JSON:SBTAdmin!@ctx.ddns.net";
+            // var hostUrl = "http://" + configuration.username + ":" + configuration.password + "@" + host;
             requestsInfo = getRequest(dataPoints, configuration.pin, hostUrl, configuration.preview, configuration.isCloud);
 
             //http://JSON:SBTAdmin!@195.198.85.22/json.html?fn=Read&PIN=7659&us=2&id=1-SW…id=1-OUTTMP&id=1-SUPPLYFLOW&id=1-RETURNFLOW&id=1-SUPPLYTMP&id=1-EXHAUSTTMP

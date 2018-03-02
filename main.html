@@ -72,6 +72,8 @@
             <input id="1-CFMSETPOINT" type="number" style="width:50%" class="blueDisplay col-md-6" placeholder="000000 CFM" step="1" min="0"/>
             <button class="col-md-6 blueBtn" style="height:40%" onclick="sendSetPoint()">Send SET POINT</button>
             <span id="consoleID"></span>
+            <span id="consoleID1"></span>
+            <span id="consoleID2"></span>
         </div>
         <div class="part">
             <p>ENTER SPEED REFERENCE</p>
@@ -126,9 +128,11 @@
 <script>
     function sendSetPoint() {
         console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
-        var setPoint = Number(document.getElementById('1-CFMSETPOINT').value);
+        var setPoint = parseFloat(document.getElementById('1-CFMSETPOINT').value).toFixed(2);
         document.getElementById('consoleID').innerHTML = "trying to set 1-CFMSETPOINT value = "+setPoint;
-        window.JSInterface.writevalue('1-CFMSETPOINT',setPoint);
+        document.getElementById('consoleID1').innerHTML = window;
+        document.getElementById('consoleID1').innerHTML = window.JSInterface;
+        window.writevalue('1-CFMSETPOINT',setPoint);
         document.getElementById('consoleID').innerHTML = "IF you see this, so value inside set 1-CFMSETPOINT value = "+setPoint;
         console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
     }
