@@ -126,7 +126,7 @@
     function sendSetPoint() {
         console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
         var setPoint = Number(document.getElementById('1-CFMSETPOINT').value);
-        window.writeValue('1-CFMSETPOINT',setPoint);
+        window.JSInterface.writeValue('1-CFMSETPOINT',setPoint);
         console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
     }
     // ALARM!!!
