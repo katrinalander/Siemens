@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5601c902-5fc9-4293-b7d7-3c7fd0b60f9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/DASH.js" afterPath="$PROJECT_DIR$/js/DASH.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.html" afterPath="$PROJECT_DIR$/main.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-687">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="77">
+              <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
@@ -66,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DASH.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DASH.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/DASH.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="267">
               <caret line="1140" column="0" lean-forward="true" selection-start-line="1140" selection-start-column="0" selection-end-line="1140" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#getEnumeration#0" expanded="false" />
@@ -96,6 +97,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Config.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
               <caret line="110" column="31" lean-forward="false" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sysSetupNext1_VFD.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sysSetupNext1_VFD.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -232,7 +233,6 @@
         <option value="$PROJECT_DIR$/js/VFD_CFM.js" />
         <option value="$PROJECT_DIR$/setupPrmtr2.html" />
         <option value="$PROJECT_DIR$/setupPrmtr3.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/temtrol.html" />
         <option value="$PROJECT_DIR$/huntair.html" />
         <option value="$PROJECT_DIR$/ventrol.html" />
@@ -242,8 +242,9 @@
         <option value="$PROJECT_DIR$/sysSetup2.html" />
         <option value="$PROJECT_DIR$/sysSetup.html" />
         <option value="$PROJECT_DIR$/maint.html" />
-        <option value="$PROJECT_DIR$/main.html" />
         <option value="$PROJECT_DIR$/js/DASH.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/main.html" />
       </list>
     </option>
   </component>
@@ -446,7 +447,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206661000" />
+    <option name="totallyTimeSpent" value="207638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="73" width="1393" height="800" extended-state="0" />
@@ -821,14 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temtrol.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -969,20 +962,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-687">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/DASH.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="267">
           <caret line="1140" column="0" lean-forward="true" selection-start-line="1140" selection-start-column="0" selection-end-line="1140" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#getEnumeration#0" expanded="false" />
@@ -1004,6 +986,25 @@
             <element signature="n#!!block;n#loadValue#0" expanded="false" />
             <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
             <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="121" column="20" lean-forward="true" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
