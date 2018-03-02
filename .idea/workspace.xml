@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5601c902-5fc9-4293-b7d7-3c7fd0b60f9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sysSetupNext11.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlSelection.html" afterPath="$PROJECT_DIR$/controlSelection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.html" afterPath="$PROJECT_DIR$/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maint.html" afterPath="$PROJECT_DIR$/maint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setupPrmtr1.html" afterPath="$PROJECT_DIR$/setupPrmtr1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetup2.html" afterPath="$PROJECT_DIR$/sysSetup2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sysSetupNext1.html" afterPath="$PROJECT_DIR$/sysSetupNext1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ventrol.html" afterPath="$PROJECT_DIR$/ventrol.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/DASH.js" afterPath="$PROJECT_DIR$/js/DASH.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,15 +53,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="127" column="77" lean-forward="false" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
+            <state relative-caret-position="-687">
+              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DASH.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/DASH.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="1140" column="0" lean-forward="true" selection-start-line="1140" selection-start-column="0" selection-end-line="1140" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!block;n#getEnumeration#0" expanded="false" />
+                <element signature="n#!!block;n#getIdsDescr#0" expanded="false" />
+                <element signature="n#!!block;n#getRequests#0" expanded="false" />
+                <element signature="n#!!block;n#getRequestsDescr#0" expanded="false" />
+                <element signature="n#!!block;n#getRequestsAlarms#0" expanded="false" />
+                <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
+                <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
+                <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
+                <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
+                <element signature="n#!!block;n#loadDash#0" expanded="false" />
+                <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
+                <element signature="n#!!block;n#loadClimatixValues#0" expanded="false" />
+                <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
+                <element signature="n#!!block;n#loadalarms#0" expanded="false" />
+                <element signature="n#!!block;n#changeImg#0" expanded="false" />
+                <element signature="n#!!block;n#loadinfoled#0" expanded="false" />
+                <element signature="n#!!block;n#loadValue#0" expanded="false" />
+                <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
+                <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,18 +112,6 @@
             <state relative-caret-position="318">
               <caret line="110" column="31" lean-forward="false" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="56" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controlSelection.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controlSelection.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="13" column="75" lean-forward="false" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -121,39 +142,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setupPrmtr1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setupPrmtr1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="118" column="33" lean-forward="false" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#p#3;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#4;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#1;n#div#0;n#div#4;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#div#5;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#!!top" expanded="true" />
-                <element signature="n#div#7;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#7;n#!!top" expanded="true" />
-                <element signature="e#12750#13202#0" expanded="false" />
-                <element signature="e#13230#13388#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -216,7 +204,6 @@
         <option value="$PROJECT_DIR$/Adam.html" />
         <option value="$PROJECT_DIR$/sysSetupNext2.html" />
         <option value="$PROJECT_DIR$/css/modBus.html" />
-        <option value="$PROJECT_DIR$/js/DASH.js" />
         <option value="$PROJECT_DIR$/css/main-sdk.min.css" />
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
@@ -256,6 +243,7 @@
         <option value="$PROJECT_DIR$/sysSetup.html" />
         <option value="$PROJECT_DIR$/maint.html" />
         <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/js/DASH.js" />
       </list>
     </option>
   </component>
@@ -266,7 +254,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="47" />
+    <option name="y" value="73" />
     <option name="width" value="1393" />
     <option name="height" value="800" />
   </component>
@@ -295,6 +284,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Siemens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Siemens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Siemens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,10 +446,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205808000" />
+    <option name="totallyTimeSpent" value="206661000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1393" height="800" extended-state="0" />
+    <frame x="47" y="73" width="1393" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20408164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -454,7 +458,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26271185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26271185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -509,7 +513,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/DASH.js</url>
-          <line>677</line>
+          <line>675</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -544,14 +548,6 @@
     <entry file="file://$PROJECT_DIR$/footer.html" />
     <entry file="file://$PROJECT_DIR$/selectUser.html" />
     <entry file="file://$PROJECT_DIR$/css/lonWorks.html" />
-    <entry file="file://$PROJECT_DIR$/js/Config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main-sdk.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -698,30 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/DASH.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2865">
-          <caret line="516" column="64" lean-forward="false" selection-start-line="516" selection-start-column="64" selection-end-line="516" selection-end-column="64" />
-          <folding>
-            <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
-            <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
-            <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
-            <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
-            <element signature="n#!!block;n#loadDash#0" expanded="false" />
-            <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
-            <element signature="e#15135#15893#0" expanded="false" />
-            <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
-            <element signature="e#25724#25772#0" expanded="false" />
-            <element signature="n#!!block;n#changeImg#0" expanded="false" />
-            <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
-            <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
-            <element signature="n#!!block;n#writeIncrementiOS#0" expanded="false" />
-            <element signature="n#!!block;n#writeIncrementAndroid#0" expanded="false" />
-            <element signature="n#!!block;n#getPlatform#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -862,7 +834,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="65" lean-forward="false" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -872,7 +844,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="65" lean-forward="false" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,7 +854,7 @@
         <state relative-caret-position="15">
           <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -989,13 +961,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/Config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="127" column="77" lean-forward="false" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
+        <state relative-caret-position="-687">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/DASH.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="1140" column="0" lean-forward="true" selection-start-line="1140" selection-start-column="0" selection-end-line="1140" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#getEnumeration#0" expanded="false" />
+            <element signature="n#!!block;n#getIdsDescr#0" expanded="false" />
+            <element signature="n#!!block;n#getRequests#0" expanded="false" />
+            <element signature="n#!!block;n#getRequestsDescr#0" expanded="false" />
+            <element signature="n#!!block;n#getRequestsAlarms#0" expanded="false" />
+            <element signature="n#!!block;n#getRequestTemp#0" expanded="false" />
+            <element signature="n#!!block;n#writeDataToClimatix#0" expanded="false" />
+            <element signature="n#!!block;n#loadDatapoints#0" expanded="false" />
+            <element signature="n#!!block;n#loadDatapointsDescr#0" expanded="false" />
+            <element signature="n#!!block;n#loadDash#0" expanded="false" />
+            <element signature="n#!!block;n#loadlastalarm#0" expanded="false" />
+            <element signature="n#!!block;n#loadClimatixValues#0" expanded="false" />
+            <element signature="n#!!block;n#loadChartValue#0" expanded="false" />
+            <element signature="n#!!block;n#loadalarms#0" expanded="false" />
+            <element signature="n#!!block;n#changeImg#0" expanded="false" />
+            <element signature="n#!!block;n#loadinfoled#0" expanded="false" />
+            <element signature="n#!!block;n#loadValue#0" expanded="false" />
+            <element signature="n#!!block;n#loadValueToAttribute#0" expanded="false" />
+            <element signature="n#!!block;n#swipeIncrement#0" expanded="false" />
           </folding>
         </state>
       </provider>

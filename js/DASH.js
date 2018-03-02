@@ -73,20 +73,19 @@ function getRequests(jid) {
         var rjid = jid.slice(i, end);
 
         var dataSend = (
-        {
-            fn: "Read",
-            PIN: configuration.pin,
-            us: 2,
-            lng: configuration.language,
-            id: rjid
-        });
+            {
+                fn: "Read",
+                PIN: configuration.pin,
+                us: 2,
+                lng: configuration.language,
+                id: rjid
+            });
 
         // replace 'id[]' to 'id'
         var dataSendString = jQuery.param(dataSend).replace(/id%5B%5D/g, "id");
         var host = configuration.uselocal ? location.hostname : configuration.host;
         var url = "http://" + host + "/json.html?" + dataSendString;
 
-        console.log("url: ",url);
         requests.push(url);
     }
 
@@ -106,13 +105,13 @@ function getRequestsDescr(jid) {
         var rjid = jid.slice(i, end);
 
         var dataSend = (
-        {
-            fn: "GetText",
-            PIN: configuration.pin,
-            us: 2,
-            lng: configuration.language,
-            id: rjid
-        });
+            {
+                fn: "GetText",
+                PIN: configuration.pin,
+                us: 2,
+                lng: configuration.language,
+                id: rjid
+            });
 
         // replace 'id[]' to 'id'
         var dataSendString = jQuery.param(dataSend).replace(/id%5B%5D/g, "id");
@@ -149,15 +148,15 @@ function getRequestTemp() {
 
 function writeDataToClimatix(idwp, value) {
     var dataSend = (
-    {
-        //type: "POST", 
-        fn: "Write",
-        PIN: configuration.pin,
-        us: 2,
-        id: idwp,
-        data: value
+        {
+            //type: "POST",
+            fn: "Write",
+            PIN: configuration.pin,
+            us: 2,
+            id: idwp,
+            data: value
 
-    });
+        });
 
     // replace 'id[]' to 'id'
     var dataSendString = jQuery.param(dataSend).replace(/id%5B%5D/g, "id");
@@ -325,11 +324,11 @@ function loadDatapoints() {
                                         bDeviceIsOn = false;
                                         break;
 
-                                        /*case 2:
-                                            //mOff_old.bootstrapToggle('off');
-                                            mOff.bootstrapToggle('off');
-                                            mAuto.bootstrapToggle('on');
-                                            break;*/
+                                    /*case 2:
+                                     //mOff_old.bootstrapToggle('off');
+                                     mOff.bootstrapToggle('off');
+                                     mAuto.bootstrapToggle('on');
+                                     break;*/
                                 }
                                 window.changingOnOffValue = -1;
                             }
@@ -339,13 +338,13 @@ function loadDatapoints() {
                                 msg.attr("style", "color:black");
                             }
                             /*if (val) {
-                                //color = "green";
-                                $(tag).bootstrapToggle('on');
-                            }
-                            else {
-                                //color = "red";
-                                $(tag).bootstrapToggle('off');
-                            }*/
+                             //color = "green";
+                             $(tag).bootstrapToggle('on');
+                             }
+                             else {
+                             //color = "red";
+                             $(tag).bootstrapToggle('off');
+                             }*/
                             //colorElement(tag, color);
                         }
 
@@ -416,16 +415,16 @@ function loadDash(file) {
                 $('#dash1').css('display', 'block');
                 $('#dash1').css({ 'width': "100%", 'height': "100%" });
                 /*var $this = $(this);
-                var $svgElem = $("#dash1", $this);
-                $svgElem.css({ 'width': "100%", 'height': "100%" });*/
+                 var $svgElem = $("#dash1", $this);
+                 $svgElem.css({ 'width': "100%", 'height': "100%" });*/
 
                 /*jsonIdsDescr = getIdsDescr(dataPointsDescr);
-                requestsDescr = getRequestsDescr(jsonIdsDescr);
-    
-                if (requestsDescr.length > 0) {
-                    requestIndex = 0;
-                    loadDatapointsDescr();
-                }*/
+                 requestsDescr = getRequestsDescr(jsonIdsDescr);
+
+                 if (requestsDescr.length > 0) {
+                 requestIndex = 0;
+                 loadDatapointsDescr();
+                 }*/
                 dataPoints = getDatapoints();
                 prepare(dataPoints);
                 jsonIds = getIds(dataPoints);
@@ -451,9 +450,9 @@ function loadlastalarm() {
     //da abilitare e provarlo con usb
     try {
         /*if (configuration.host.indexOf("localhost") < 0) {
-            loadalarms();
-            return;
-        }*/
+         loadalarms();
+         return;
+         }*/
         var lastal = JSInterface.getlastalarm();
         var mImg = document.getElementById('almicon');
 
@@ -480,7 +479,6 @@ function loadlastalarm() {
 }
 
 function loadClimatixValues() {
-    console.log("inside loadClimatixValues");
     try {
         $(document).ready(function () {
 
@@ -494,9 +492,9 @@ function loadClimatixValues() {
             }
 
             /*jsonIdInfo = [];
-            jsonIdInfo.push("1-SUPPLYTMP");
+             jsonIdInfo.push("1-SUPPLYTMP");
 
-            requestsInfo = getRequests(jsonIdInfo);*/
+             requestsInfo = getRequests(jsonIdInfo);*/
 
             //var rjid = ["1-SUPPLYTMP", "1-OUTTMP"];// getNextJsonIds(jsonIdIndex, requestNum, jsonIds);
             var host = configuration.uselocal ? location.hostname : configuration.host;
@@ -509,7 +507,7 @@ function loadClimatixValues() {
                     url: requestsInfo,
                     dataType: "jsonp",
                     success: function (data) {
-                        console.log("data: ",data);
+
                         data.forEach(function (value) {
 
                             dataPoints.forEach(function (element) {
@@ -523,77 +521,77 @@ function loadClimatixValues() {
                                     val = val ? 1 : 0;
 
                                 //if (element.text) {
-                                    if (element === value.id) { // print value
-                                        //element.found = true;
+                                if (element === value.id) { // print value
+                                    //element.found = true;
 
-                                        /*if (element.text.raw)
+                                    /*if (element.text.raw)
+                                     $(tag).text(val);
+                                     else {*/
+                                    var oldText = (tag)[0].textContent;
+                                    var rep = parseInt(value.rep, 10);
+                                    switch (rep) {
+                                        case 0:
+                                            $(tag).text(parseFloat(val).toFixed(2));
+                                            break;
+
+                                        case 1:
+                                        case 2:
+                                            if (value.descr)
+                                                $(tag).text(parseFloat(val).toFixed(2) + " " + value.descr);
+                                            else {
+                                                $(tag).text(val);
+                                            }
+                                            break;
+
+                                        case 3:
+                                            if (value.descr) {
+                                                var aenum = getEnumeration(value.descr);
+
+                                                var vale = val;
+                                                if (vale < 0) vale = 0;
+                                                if (vale >= aenum) vale = aenum - 1;
+
+                                                $(tag).text(aenum[vale]);
+                                            } else
+                                                $(tag).text(val);
+
+                                            break;
+
+                                        case 4: // bitfield
+                                            $(tag).text("0x" + val.toString(16));
+                                            break;
+
+                                        case 5: // time, TODO
+                                            break;
+
+                                        case 6: // date, TODO
+                                            break;
+
+                                        case 7: // week-N-day, TODO
+                                            break;
+
+                                        default:
                                             $(tag).text(val);
-                                        else {*/
-                                        var oldText = (tag)[0].textContent;
-                                            var rep = parseInt(value.rep, 10);
-                                            switch (rep) {
-                                                case 0:
-                                                    $(tag).text(parseFloat(val).toFixed(2));
-                                                    break;
-
-                                                case 1:
-                                                case 2:
-                                                    if (value.descr)
-                                                        $(tag).text(parseFloat(val).toFixed(2) + " " + value.descr);
-                                                    else {
-                                                        $(tag).text(val);
-                                                    }
-                                                    break;
-
-                                                case 3:
-                                                    if (value.descr) {
-                                                        var aenum = getEnumeration(value.descr);
-
-                                                        var vale = val;
-                                                        if (vale < 0) vale = 0;
-                                                        if (vale >= aenum) vale = aenum - 1;
-
-                                                        $(tag).text(aenum[vale]);
-                                                    } else
-                                                        $(tag).text(val);
-
-                                                    break;
-
-                                                case 4: // bitfield
-                                                    $(tag).text("0x" + val.toString(16));
-                                                    break;
-
-                                                case 5: // time, TODO
-                                                    break;
-
-                                                case 6: // date, TODO
-                                                    break;
-
-                                                case 7: // week-N-day, TODO
-                                                    break;
-
-                                                default:
-                                                    $(tag).text(val);
-                                            }
-
-                                            var attribute = $(tag).attr('data-climatix-originalvalue');
-                                            var attributeHigh = $(tag).attr('data-climatix-high');
-                                            var attributeLow = $(tag).attr('data-climatix-low');
-                                            //var attributeDisply = $(tag).attr('data-climatix-display');
-
-                                            if (attribute != null && attribute != undefined)
-                                                $(tag).attr('data-climatix-originalvalue', val);
-                                            if (attributeHigh != null && attributeHigh != undefined)
-                                                $(tag).attr('data-climatix-high', value.high);
-                                            if (attributeLow != null && attributeLow != undefined)
-                                                $(tag).attr('data-climatix-low', value.low);
-                                            /*if (attributeDisply != null && attributeDisply != undefined)
-                                                $(tag).attr('data-climatix-display', value.diplay);*/
-
-                                            if ((tag)[0].textContent != oldText) {
-                                                $(tagsp).text(parseFloat(val).toFixed(2));
-                                            }
                                     }
+
+                                    var attribute = $(tag).attr('data-climatix-originalvalue');
+                                    var attributeHigh = $(tag).attr('data-climatix-high');
+                                    var attributeLow = $(tag).attr('data-climatix-low');
+                                    //var attributeDisply = $(tag).attr('data-climatix-display');
+
+                                    if (attribute != null && attribute != undefined)
+                                        $(tag).attr('data-climatix-originalvalue', val);
+                                    if (attributeHigh != null && attributeHigh != undefined)
+                                        $(tag).attr('data-climatix-high', value.high);
+                                    if (attributeLow != null && attributeLow != undefined)
+                                        $(tag).attr('data-climatix-low', value.low);
+                                    /*if (attributeDisply != null && attributeDisply != undefined)
+                                     $(tag).attr('data-climatix-display', value.diplay);*/
+
+                                    if ((tag)[0].textContent != oldText) {
+                                        $(tagsp).text(parseFloat(val).toFixed(2));
+                                    }
+                                }
                                 //}
                             });
                         });
@@ -803,17 +801,17 @@ function loadinfoled() {
 
                 //da capire bene che icone mettere e con che valori
                 /*if (data[0].value <= 0) {
-                    /*var mImg = document.getElementById('infoicon');
-                    mImg.style.visibility = "hidden";*
-                    //$('#infoicon').attr('src', 'images/alarm.jpg');
-                    document.getElementById("infoicon").src = (document.getElementById("infoicon").src.indexOf("images/red.png") == -1) ? "images/red.png" : "images/green.png";
-                }
-                else {
-                    /*var mImg = document.getElementById('infoicon');
-                    mImg.style.visibility = "visible";
-                    $('#infoicon').attr('src', 'images/greenlight.jpg');*
-                    document.getElementById("infoicon").src = (document.getElementById("infoicon").src.indexOf("images/red.png") == -1) ? "images/red.png" : "images/green.png";
-                }*/
+                 /*var mImg = document.getElementById('infoicon');
+                 mImg.style.visibility = "hidden";*
+                 //$('#infoicon').attr('src', 'images/alarm.jpg');
+                 document.getElementById("infoicon").src = (document.getElementById("infoicon").src.indexOf("images/red.png") == -1) ? "images/red.png" : "images/green.png";
+                 }
+                 else {
+                 /*var mImg = document.getElementById('infoicon');
+                 mImg.style.visibility = "visible";
+                 $('#infoicon').attr('src', 'images/greenlight.jpg');*
+                 document.getElementById("infoicon").src = (document.getElementById("infoicon").src.indexOf("images/red.png") == -1) ? "images/red.png" : "images/green.png";
+                 }*/
                 window.infoledloaded = true;
                 setTimeout(loadinfoled, 1000);
             },
@@ -825,99 +823,96 @@ function loadinfoled() {
 
 }
 
-function writeValue(watchpointID, newvalue) {
+function writevalue(watchpointID, newvalue) {
     writeDataToClimatix(watchpointID, newvalue);
 }
 
 function loadValue(datapoint, idelement) {
-    console.log("inside loadValue()");
-
     try {
 
-            //datapoints.push(datapoint);
+        //datapoints.push(datapoint);
 
-            jsonIdInfo = [];
-            jsonIdInfo.push(datapoint);
+        jsonIdInfo = [];
+        jsonIdInfo.push(datapoint);
 
-            requestsInfo = getRequests(jsonIdInfo);
+        requestsInfo = getRequests(jsonIdInfo);
 
-            //var rjid = ["1-SUPPLYTMP", "1-OUTTMP"];// getNextJsonIds(jsonIdIndex, requestNum, jsonIds);
-            /*var host = configuration.uselocal ? location.hostname : configuration.host;
-            var hostUrl = "http://" + configuration.username + ":" + configuration.password + "@" + host;
-            requestsInfo = getRequest(dataPoints, configuration.pin, hostUrl, configuration.preview, configuration.isCloud);*/
+        //var rjid = ["1-SUPPLYTMP", "1-OUTTMP"];// getNextJsonIds(jsonIdIndex, requestNum, jsonIds);
+        /*var host = configuration.uselocal ? location.hostname : configuration.host;
+         var hostUrl = "http://" + configuration.username + ":" + configuration.password + "@" + host;
+         requestsInfo = getRequest(dataPoints, configuration.pin, hostUrl, configuration.preview, configuration.isCloud);*/
 
-            //http://JSON:SBTAdmin!@195.198.85.22/json.html?fn=Read&PIN=7659&us=2&id=1-SW…id=1-OUTTMP&id=1-SUPPLYFLOW&id=1-RETURNFLOW&id=1-SUPPLYTMP&id=1-EXHAUSTTMP
-            try {
-                $.ajax({
-                    url: requestsInfo,
-                    dataType: "jsonp",
-                    success: function (data) {
-                        console.log("data: ",data);
-                        if (data.length <= 0)
-                            return;
-                        var val = data[0].value;
+        //http://JSON:SBTAdmin!@195.198.85.22/json.html?fn=Read&PIN=7659&us=2&id=1-SW…id=1-OUTTMP&id=1-SUPPLYFLOW&id=1-RETURNFLOW&id=1-SUPPLYTMP&id=1-EXHAUSTTMP
+        try {
+            $.ajax({
+                url: requestsInfo,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.length <= 0)
+                        return;
+                    var val = data[0].value;
 
-                        var tag = $("#" + idelement);
-                        $(tag).attr("data-climatix-value", val);
+                    var tag = $("#" + idelement);
+                    $(tag).attr("data-climatix-value", val);
 
-                        if (idelement == "")
-                            return;
+                    if (idelement == "")
+                        return;
 
-                                var rep = parseInt(data[0].rep, 10);
-                                    switch (rep) {
-                                        case 0:
-                                            $(tag).text(val);
-                                            break;
+                    var rep = parseInt(data[0].rep, 10);
+                    switch (rep) {
+                        case 0:
+                            $(tag).text(val);
+                            break;
 
-                                        case 1:
-                                        case 2:
-                                            if (data[0].descr)
-                                                $(tag).text(val + " " + data[0].descr);
-                                            else {
-                                                $(tag).text(val);
-                                            }
-                                            break;
+                        case 1:
+                        case 2:
+                            if (data[0].descr)
+                                $(tag).text(val + " " + data[0].descr);
+                            else {
+                                $(tag).text(val);
+                            }
+                            break;
 
-                                        case 3:
-                                            if (data[0].descr) {
-                                                var aenum = getEnumeration(data[0].descr);
+                        case 3:
+                            if (data[0].descr) {
+                                var aenum = getEnumeration(data[0].descr);
 
-                                                var vale = val;
-                                                if (vale < 0) vale = 0;
-                                                if (vale >= aenum) vale = aenum - 1;
+                                var vale = val;
+                                if (vale < 0) vale = 0;
+                                if (vale >= aenum) vale = aenum - 1;
 
-                                                $(tag).text(aenum[vale]);
-                                            } else
-                                                $(tag).text(val);
+                                $(tag).text(aenum[vale]);
+                            } else
+                                $(tag).text(val);
 
-                                            break;
+                            break;
 
-                                        case 4: // bitfield
-                                            $(tag).text("0x" + val.toString(16));
-                                            break;
+                        case 4: // bitfield
+                            $(tag).text("0x" + val.toString(16));
+                            break;
 
-                                        case 5: // time, TODO
-                                            break;
+                        case 5: // time, TODO
+                            break;
 
-                                        case 6: // date, TODO
-                                            break;
+                        case 6: // date, TODO
+                            break;
 
-                                        case 7: // week-N-day, TODO
-                                            break;
+                        case 7: // week-N-day, TODO
+                            break;
 
-                                        default:
-                                            $(tag).text(val);
-                                    }
-                                    //}
-                                    return val;
-                    },
-                    error: function (e) {
+                        default:
+                            $(tag).text(val);
                     }
+                    //}
+                    return val;
+                },
+                error: function (e) {
+                }
 
-                });
-            }
-            catch (err) {
-            }
+            });
+        }
+        catch (err) {
+        }
 
     }
     catch (err) {
@@ -970,7 +965,7 @@ function swipeIncrement(datapoint, idelement, idtempelement, attribute, incremen
         if (attrvalue != null) {
             attrvalue = parseFloat(attrvalue) + parseFloat(increment);
             mElPadre.setAttribute(attribute, attrvalue);
-            mElTemp.innerHTML = parseFloat(attrvalue).toFixed(2); 
+            mElTemp.innerHTML = parseFloat(attrvalue).toFixed(2);
             //tempel.innerHTML = increment;
             return;
         }
@@ -1114,20 +1109,19 @@ function writeIncrementAndroid(datapoint, idelement, attribute, increment) {
 function setvalue(datapointIndexPage, datapointName, newValue) {
     if (getPlatform().toString() == "iOS") {
         window.open("ios://write?page=" + datapointIndexPage + "&name=" + datapointName + "&value=" + newValue);
-        }
+    }
     else {
-        // window.JSInterface.writeValue(datapointName, newValue);
-        window.writeValue(datapointName, newValue);
+        window.JSInterface.writeValue(datapointName, newValue);
     }
 }
 
 function getPlatform() {
     /*var platform = ["Win32", "Android", "iOS"];
-    for (var i = 0; i < platform.length; i++) {
-        if (navigator.platform.indexOf(platform[i]) > -1) {
-            return platform[i];
-        }
-    }*/
+     for (var i = 0; i < platform.length; i++) {
+     if (navigator.platform.indexOf(platform[i]) > -1) {
+     return platform[i];
+     }
+     }*/
 
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
