@@ -7,16 +7,17 @@
 <script src='js/Config.js'></script>
 <script src='js/jquery.js'></script>
 <script src='js/jquery-ui.js'></script>
-<!--<script src='js/DASH.js'></script>-->
+<script src='js/DASH.js'></script>
 <div class="header">
     <h2>FANWALL TECHNOLOGY</h2>
 </div>
 
-<div class="display">
+<div class="display" onload="loadClimatixValues()">
     <div class="infoDisplay col-sm-9 noPadding">
         <div class="col-sm-3 total noPadding">
             <p>TOTAL<br/>CFM</p>
-            <div id="1-TOTAL AIRFLOW" class="blackDisplay">000000 CFM</div>
+            <!--<div id="1-TOTAL_AIRFLOW" class="blackDisplay">000000 CFM</div>-->
+            <div id="DP_1-CFMSETPOINT" class="blackDisplay"></div>
         </div>
         <div class="col-sm-3 total noPadding">
             <p>TSP ACROSS<br/>FANWALL</p>
@@ -68,7 +69,8 @@
     <div class="right showCFM noPadding col-lg-4">
         <div class="part">
             <p>ENTER CFM SET POINT</p>
-            <input id="1-CFM SETPOINT" type="number" class="blueDisplay" placeholder="000000 CFM" step="1" min="0"/>
+            <input id="1-CFMSETPOINT" type="number" style="width:50%" class="blueDisplay col-md-6" placeholder="000000 CFM" step="1" min="0"/>
+            <button class="col-md-6 blueBtn" style="height:40%" onclick="sendSetPoint()">Send SET POINT</button>
         </div>
         <div class="part">
             <p>ENTER SPEED REFERENCE</p>
@@ -121,15 +123,12 @@
 </div>
 
 <script>
-//    if(sessionStorage.getItem('startupScreen') === "0") {
-//        window.location.href = "huntair.html";
-//        }
-//    else if(sessionStorage.getItem('startupScreen') === "1") {
-//        window.location.href = "temtrol.html";
-//        }
-//    else if(sessionStorage.getItem('startupScreen') === "2") {
-//        window.location.href = "ventrol.html";
-//        }
+    function sendSetPoint() {
+        console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
+        var setPoint = Number(document.getElementById('1-CFMSETPOINT').value);
+        window.writeValue('1-CFMSETPOINT',setPoint);
+        console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
+    }
     // ALARM!!!
 //    var alarm = window.loadValue('1-ACTOPMODE');
 //    console.log("alarms: ",alarm);
