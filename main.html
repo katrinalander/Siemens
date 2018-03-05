@@ -127,14 +127,15 @@
 
 <script>
     function sendSetPoint() {
-        console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
+//        console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
         var setPoint = parseFloat(document.getElementById('1-CFMSETPOINT').value).toFixed(2);
         document.getElementById('consoleID').innerHTML = "trying to set 1-CFMSETPOINT value = "+setPoint;
-        document.getElementById('consoleID1').innerHTML = window;
-        document.getElementById('consoleID1').innerHTML = window.JSInterface;
-        window.writevalue('1-CFMSETPOINT',setPoint);
-        document.getElementById('consoleID').innerHTML = "IF you see this, so value inside set 1-CFMSETPOINT value = "+setPoint;
-        console.log("====> ",window.loadValue('DP_1-CFMSETPOINT'));
+//        document.getElementById('consoleID1').innerHTML = window;
+//        document.getElementById('consoleID1').innerHTML = window.JSInterface;
+        window.jsinterface.writevalue('1-CFMSETPOINT',setPoint);
+//        document.getElementById('consoleID').innerHTML = "IF you see this, so value inside set 1-CFMSETPOINT value = "+setPoint;
+//        console.log("====> ",window.jsinterface.loadValue('DP_1-CFMSETPOINT'));
+        document.getElementById('DP_1-CFMSETPOINT').innerHTML = window.jsinterface.loadValue('DP_1-CFMSETPOINT');
     }
     // ALARM!!!
 //    var alarm = window.loadValue('1-ACTOPMODE');
